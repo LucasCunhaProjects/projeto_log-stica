@@ -1,10 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\lcp16\\source\\repos\\ProjetoLogistica\\",
+  "WorkspaceRootPath": "C:\\Users\\lucas.cpsilva\\Desktop\\Nova pasta\\ProjetoLogistica\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|c:\\users\\lcp16\\source\\repos\\projetologistica\\projetologistica\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|C:\\Users\\lucas.cpsilva\\Desktop\\Nova pasta\\ProjetoLogistica\\projetologistica\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|solutionrelative:projetologistica\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|c:\\users\\lucas.cpsilva\\desktop\\nova pasta\\projetologistica\\projetologistica\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|solutionrelative:projetologistica\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|C:\\Users\\lucas.cpsilva\\Desktop\\Nova pasta\\ProjetoLogistica\\projetologistica\\conexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|solutionrelative:projetologistica\\conexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,15 +22,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\lucas.cpsilva\\Desktop\\Nova pasta\\ProjetoLogistica\\ProjetoLogistica\\Form1.cs",
+              "RelativeDocumentMoniker": "ProjetoLogistica\\Form1.cs",
+              "ToolTip": "C:\\Users\\lucas.cpsilva\\Desktop\\Nova pasta\\ProjetoLogistica\\ProjetoLogistica\\Form1.cs",
+              "RelativeToolTip": "ProjetoLogistica\\Form1.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-01T23:19:45.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "conexao.cs",
+              "DocumentMoniker": "C:\\Users\\lucas.cpsilva\\Desktop\\Nova pasta\\ProjetoLogistica\\ProjetoLogistica\\conexao.cs",
+              "RelativeDocumentMoniker": "ProjetoLogistica\\conexao.cs",
+              "ToolTip": "C:\\Users\\lucas.cpsilva\\Desktop\\Nova pasta\\ProjetoLogistica\\ProjetoLogistica\\conexao.cs",
+              "RelativeToolTip": "ProjetoLogistica\\conexao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-01T23:06:35.874Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\lcp16\\source\\repos\\ProjetoLogistica\\ProjetoLogistica\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\lucas.cpsilva\\Desktop\\Nova pasta\\ProjetoLogistica\\ProjetoLogistica\\Form1.cs",
               "RelativeDocumentMoniker": "ProjetoLogistica\\Form1.cs",
-              "ToolTip": "C:\\Users\\lcp16\\source\\repos\\ProjetoLogistica\\ProjetoLogistica\\Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\lucas.cpsilva\\Desktop\\Nova pasta\\ProjetoLogistica\\ProjetoLogistica\\Form1.cs [Design]",
               "RelativeToolTip": "ProjetoLogistica\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-30T13:44:56.311Z",
