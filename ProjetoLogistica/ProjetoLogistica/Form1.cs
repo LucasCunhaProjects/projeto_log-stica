@@ -27,7 +27,7 @@ namespace ProjetoLogistica
         }
 
 
-        private void BloquearCampos()
+        private void BloquearCamposVeiculo()
         {
             txt_Modelo.Enabled = false;
             txt_Placa.Enabled = false;
@@ -44,7 +44,15 @@ namespace ProjetoLogistica
             txt_MotoristaID.Enabled = false;
         }
 
-        private void LiberarCampos()
+        private void BloquearCamposRota()
+        {
+            txt_origemRota.Enabled = false;
+            txt_destinoRota.Enabled = false;
+            txt_distanciaRota.Enabled = false;
+            txt_rotaID.Enabled = false;
+        }
+
+        private void LiberarCamposVeiculo()
         {
             txt_Modelo.Enabled = true;
             txt_Placa.Enabled = true;
@@ -59,7 +67,14 @@ namespace ProjetoLogistica
             txt_Telefone.Enabled = true;
         }
 
-        private void LimparCampos()
+        private void LiberarCamposRota()
+        {
+            txt_origemRota.Enabled = true;
+            txt_destinoRota.Enabled = true;
+            txt_distanciaRota.Enabled = true;
+        }
+
+        private void LimparCamposVeiculo()
         {
             txt_VeiculoID.Clear();
             txt_Modelo.Clear();
@@ -78,6 +93,16 @@ namespace ProjetoLogistica
             txt_Telefone.Clear();
 
             idMotoristaSelecionado = 0;
+        }
+
+        private void LimparCamposRota()
+        {
+            txt_rotaID.Clear();
+            txt_origemRota.Clear();
+            txt_destinoRota.Clear();
+            txt_distanciaRota.Clear();
+
+            idRotaSelecionada = 0;
         }
 
         private void CarregarVeiculos()
@@ -149,11 +174,45 @@ namespace ProjetoLogistica
             }
         }
 
-        private void EntrarModoEdicao()
+        private void CarregarRota()
+        {
+            try
+            {
+                using (MySqlConnection banco = new MySqlConnection(Conexao.ConexaoString))
+                {
+                    banco.Open();
+
+                    string sql = @"SELECT
+                                    RotaID,
+                                    Origem,
+                                    Destino,
+                                    Distancia
+                                  FROM rota";
+
+                    MySqlDataAdapter da = new MySqlDataAdapter(sql, banco);
+                    DataTable dt = new DataTable();
+
+                    da.Fill(dt);
+
+                    dataGrid_Rota.DataSource = dt;
+                }
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(
+                    "Erro ao buscar rota: " + erro.Message,
+                    "Erro",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private void EntrarModoEdicaoVeiculo()
         {
             modoEdicao = true;
 
-            LiberarCampos();
+            LiberarCamposVeiculo();
 
             btn_salvarVeiculo.Enabled = true;
 
@@ -181,11 +240,27 @@ namespace ProjetoLogistica
             btn_LimparMotorista.Enabled = false;
         }
 
-        private void SairModoEdicao()
+        private void EntrarModoEdicaoRota()
+        {
+            modoEdicao = true;
+
+            LiberarCamposRota();
+
+            btn_salvarRota.Enabled = true;
+
+            btn_excluirRota.Text = "Cancelar";
+            btn_excluirRota.Enabled = true;
+
+            btn_editarRota.Enabled = false;
+            btn_buscarRota.Enabled = false;
+            btn_LimparRota.Enabled = false;
+        }
+
+        private void SairModoEdicaoVeiculo()
         {
             modoEdicao = false;
 
-            BloquearCampos();
+            BloquearCamposVeiculo();
 
             btn_excluirVeiculo.Text = "Excluir";
 
@@ -220,6 +295,24 @@ namespace ProjetoLogistica
             txt_Telefone.Enabled = false;
         }
 
+        private void SairModoEdicaoRota()
+        {
+            modoEdicao = false;
+
+            BloquearCamposRota();
+
+            btn_excluirRota.Text = "Excluir";
+
+            btn_salvarRota.Enabled = true;
+            btn_excluirRota.Enabled = true;
+            btn_editarRota.Enabled = true;
+            btn_buscarRota.Enabled = true;
+            btn_LimparRota.Enabled = true;
+
+            txt_origemRota.Enabled = false;
+            txt_destinoRota.Enabled = false;
+            txt_distanciaRota.Enabled = false;
+        }
 
         private void btn_salvarVeiculo_Click(object sender, EventArgs e)
         {
@@ -254,7 +347,7 @@ namespace ProjetoLogistica
 
                         CarregarVeiculos();
 
-                        SairModoEdicao();
+                        SairModoEdicaoVeiculo();
 
                     }
                     else
@@ -296,7 +389,7 @@ namespace ProjetoLogistica
 
                 modoEdicao = false;
 
-                BloquearCampos();
+                BloquearCamposVeiculo();
 
             }
             catch (Exception erro)
@@ -308,7 +401,7 @@ namespace ProjetoLogistica
         private void btn_buscarVeiculo_Click(object sender, EventArgs e)
         {
             CarregarVeiculos();
-            SairModoEdicao();
+            SairModoEdicaoVeiculo();
         }
 
         private void dataGrid_Veiculo_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -339,7 +432,7 @@ namespace ProjetoLogistica
                 return;
             }
 
-            EntrarModoEdicao();
+            EntrarModoEdicaoVeiculo();
 
         }
 
@@ -347,9 +440,9 @@ namespace ProjetoLogistica
         {
             if (modoEdicao)
             {
-                SairModoEdicao();
+                SairModoEdicaoVeiculo();
 
-                LimparCampos();
+                LimparCamposVeiculo();
 
                 return;
             }
@@ -386,7 +479,7 @@ namespace ProjetoLogistica
 
                     MessageBox.Show("Veículo excluído com sucesso!");
 
-                    LimparCampos();
+                    LimparCamposVeiculo();
 
                     CarregarVeiculos();
 
@@ -401,7 +494,7 @@ namespace ProjetoLogistica
 
         private void btn_LimparTelaVeiculo_Click(object sender, EventArgs e)
         {
-            LimparCampos();
+            LimparCamposVeiculo();
 
             dataGrid_Veiculo.DataSource = null;
 
@@ -409,7 +502,7 @@ namespace ProjetoLogistica
 
             btn_excluirVeiculo.Text = "Excluir";
 
-            LiberarCampos();
+            LiberarCamposVeiculo();
 
             txt_Modelo.Focus();
         }
@@ -599,6 +692,195 @@ namespace ProjetoLogistica
 
                 idMotoristaSelecionado = Convert.ToInt32(
                     linha.Cells["MotoristaID"].Value);
+            }
+        }
+
+        private void btn_salvarRota_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (MySqlConnection banco = new MySqlConnection(Conexao.ConexaoString))
+                {
+                    banco.Open();
+
+                    if (modoEdicao)
+                    {
+                        string sql = @"
+                            UPDATE Rota
+                            SET
+                                Origem = @origem,
+                                Destino = @destino,
+                                Distancia = @distancia
+                            WHERE RotaID = @ID";
+
+                        MySqlCommand comando = new MySqlCommand(sql, banco);
+
+                        comando.Parameters.AddWithValue("@ID", idRotaSelecionada);
+                        comando.Parameters.AddWithValue("@origem", txt_origemRota.Text);
+                        comando.Parameters.AddWithValue("@destino", txt_destinoRota.Text);
+                        comando.Parameters.AddWithValue("@distancia", Convert.ToDecimal(txt_distanciaRota.Text));
+
+                        comando.ExecuteNonQuery();
+
+                        MessageBox.Show("Rota atualizada com sucesso.");
+
+                        CarregarRota();
+
+                        SairModoEdicaoRota();
+
+                    }
+                    else
+                    {
+                        string sql = @"
+                            INSERT INTO rota
+                            (origem, destino, distancia)
+                            VALUES
+                            (@origem, @destino, @distancia)";
+
+                        MySqlCommand comando = new MySqlCommand(sql, banco);
+
+                        comando.Parameters.AddWithValue("@ID", idRotaSelecionada);
+                        comando.Parameters.AddWithValue("@origem", txt_origemRota.Text);
+                        comando.Parameters.AddWithValue("@destino", txt_destinoRota.Text);
+                        comando.Parameters.AddWithValue("@distancia", txt_distanciaRota.Text);
+
+                        comando.ExecuteNonQuery();
+
+                        txt_rotaID.Clear();
+                        txt_origemRota.Clear();
+                        txt_destinoRota.Clear();
+                        txt_distanciaRota.Clear();
+
+                        txt_origemRota.Focus();
+
+                        MessageBox.Show(
+                            "Rota cadastrada com sucesso!",
+                            "Sucesso",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+
+                        CarregarRota();
+
+                    }
+
+                }
+
+                modoEdicao = false;
+
+                BloquearCamposRota();
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
+        }
+
+        private void btn_editarRota_Click(object sender, EventArgs e)
+        {
+            CarregarRota();
+
+            if (idRotaSelecionada == 0)
+            {
+                MessageBox.Show("Selecione uma rota.");
+                return;
+            }
+
+            EntrarModoEdicaoRota();
+        }
+
+        private void btn_buscarRota_Click(object sender, EventArgs e)
+        {
+            CarregarRota();
+            SairModoEdicaoRota();
+        }
+
+        private void btn_excluirRota_Click(object sender, EventArgs e)
+        {
+            if (modoEdicao)
+            {
+                SairModoEdicaoRota();
+
+                LimparCamposRota();
+
+                return;
+            }
+
+            if (idRotaSelecionada == 0)
+            {
+                MessageBox.Show("Selecione uma rota para excluir.");
+                return;
+            }
+
+            DialogResult resultado = MessageBox.Show(
+                "Deseja realmente excluir esta rota?",
+                "Confirmação",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                try
+                {
+                    using (MySqlConnection banco = new MySqlConnection(Conexao.ConexaoString))
+                    {
+                        banco.Open();
+
+                        string sql =
+                            "DELETE FROM rota WHERE RotaID = @ID";
+
+                        MySqlCommand comando = new MySqlCommand(sql, banco);
+
+                        comando.Parameters.AddWithValue("@ID", idRotaSelecionada);
+
+                        comando.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Rota excluída com sucesso!");
+
+                    LimparCamposRota();
+
+                    CarregarRota();
+
+                    idRotaSelecionada = 0;
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show("Erro ao excluir: " + erro.Message);
+                }
+            }
+        }
+        
+
+        private void btn_LimparRota_Click(object sender, EventArgs e)
+        {
+            LimparCamposRota();
+
+            dataGrid_Rota.DataSource = null;
+
+            modoEdicao = false;
+
+            btn_excluirRota.Text = "Excluir";
+
+            LiberarCamposRota();
+
+            txt_origemRota.Focus();
+        }
+
+        private void dataGrid_Rota_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow linha = dataGrid_Rota.Rows[e.RowIndex];
+
+                txt_rotaID.Text = linha.Cells["RotaID"].Value.ToString();
+                txt_origemRota.Text = linha.Cells["Origem"].Value.ToString();
+                txt_destinoRota.Text = linha.Cells["Destino"].Value.ToString();
+                txt_distanciaRota.Text = linha.Cells["Distancia"].Value.ToString();
+
+
+                idRotaSelecionada = Convert.ToInt32(
+                    linha.Cells["RotaID"].Value);
             }
         }
     }

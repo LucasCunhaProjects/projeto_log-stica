@@ -62,16 +62,16 @@
             this.btn_buscarMotorista = new System.Windows.Forms.Button();
             this.btn_editarMotorista = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGrid_Rota = new System.Windows.Forms.DataGridView();
             this.btn_LimparRota = new System.Windows.Forms.Button();
             this.btn_excluirRota = new System.Windows.Forms.Button();
             this.btn_buscarRota = new System.Windows.Forms.Button();
             this.btn_editarRota = new System.Windows.Forms.Button();
             this.btn_salvarRota = new System.Windows.Forms.Button();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txt_distanciaRota = new System.Windows.Forms.TextBox();
+            this.txt_destinoRota = new System.Windows.Forms.TextBox();
+            this.txt_origemRota = new System.Windows.Forms.TextBox();
+            this.txt_rotaID = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -116,7 +116,7 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Motorista)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Rota)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabPage5.SuspendLayout();
@@ -482,16 +482,16 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.dataGridView2);
+            this.tabPage3.Controls.Add(this.dataGrid_Rota);
             this.tabPage3.Controls.Add(this.btn_LimparRota);
             this.tabPage3.Controls.Add(this.btn_excluirRota);
             this.tabPage3.Controls.Add(this.btn_buscarRota);
             this.tabPage3.Controls.Add(this.btn_editarRota);
             this.tabPage3.Controls.Add(this.btn_salvarRota);
-            this.tabPage3.Controls.Add(this.textBox13);
-            this.tabPage3.Controls.Add(this.textBox12);
-            this.tabPage3.Controls.Add(this.textBox11);
-            this.tabPage3.Controls.Add(this.textBox10);
+            this.tabPage3.Controls.Add(this.txt_distanciaRota);
+            this.tabPage3.Controls.Add(this.txt_destinoRota);
+            this.tabPage3.Controls.Add(this.txt_origemRota);
+            this.tabPage3.Controls.Add(this.txt_rotaID);
             this.tabPage3.Controls.Add(this.label13);
             this.tabPage3.Controls.Add(this.label12);
             this.tabPage3.Controls.Add(this.label11);
@@ -503,13 +503,14 @@
             this.tabPage3.Text = "Rota";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // dataGrid_Rota
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(341, 49);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(433, 357);
-            this.dataGridView2.TabIndex = 13;
+            this.dataGrid_Rota.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid_Rota.Location = new System.Drawing.Point(341, 49);
+            this.dataGrid_Rota.Name = "dataGrid_Rota";
+            this.dataGrid_Rota.Size = new System.Drawing.Size(433, 357);
+            this.dataGrid_Rota.TabIndex = 13;
+            this.dataGrid_Rota.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Rota_CellContentClick);
             // 
             // btn_LimparRota
             // 
@@ -521,6 +522,7 @@
             this.btn_LimparRota.TabIndex = 12;
             this.btn_LimparRota.Text = "Limpar";
             this.btn_LimparRota.UseVisualStyleBackColor = true;
+            this.btn_LimparRota.Click += new System.EventHandler(this.btn_LimparRota_Click);
             // 
             // btn_excluirRota
             // 
@@ -532,6 +534,7 @@
             this.btn_excluirRota.TabIndex = 11;
             this.btn_excluirRota.Text = "Excluir";
             this.btn_excluirRota.UseVisualStyleBackColor = true;
+            this.btn_excluirRota.Click += new System.EventHandler(this.btn_excluirRota_Click);
             // 
             // btn_buscarRota
             // 
@@ -543,6 +546,7 @@
             this.btn_buscarRota.TabIndex = 10;
             this.btn_buscarRota.Text = "  Buscar";
             this.btn_buscarRota.UseVisualStyleBackColor = true;
+            this.btn_buscarRota.Click += new System.EventHandler(this.btn_buscarRota_Click);
             // 
             // btn_editarRota
             // 
@@ -554,6 +558,7 @@
             this.btn_editarRota.TabIndex = 9;
             this.btn_editarRota.Text = "Editar";
             this.btn_editarRota.UseVisualStyleBackColor = true;
+            this.btn_editarRota.Click += new System.EventHandler(this.btn_editarRota_Click);
             // 
             // btn_salvarRota
             // 
@@ -565,34 +570,36 @@
             this.btn_salvarRota.TabIndex = 8;
             this.btn_salvarRota.Text = "Salvar";
             this.btn_salvarRota.UseVisualStyleBackColor = true;
+            this.btn_salvarRota.Click += new System.EventHandler(this.btn_salvarRota_Click);
             // 
-            // textBox13
+            // txt_distanciaRota
             // 
-            this.textBox13.Location = new System.Drawing.Point(80, 195);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(246, 20);
-            this.textBox13.TabIndex = 7;
+            this.txt_distanciaRota.Location = new System.Drawing.Point(80, 195);
+            this.txt_distanciaRota.Name = "txt_distanciaRota";
+            this.txt_distanciaRota.Size = new System.Drawing.Size(246, 20);
+            this.txt_distanciaRota.TabIndex = 7;
             // 
-            // textBox12
+            // txt_destinoRota
             // 
-            this.textBox12.Location = new System.Drawing.Point(70, 145);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(259, 20);
-            this.textBox12.TabIndex = 6;
+            this.txt_destinoRota.Location = new System.Drawing.Point(70, 145);
+            this.txt_destinoRota.Name = "txt_destinoRota";
+            this.txt_destinoRota.Size = new System.Drawing.Size(259, 20);
+            this.txt_destinoRota.TabIndex = 6;
             // 
-            // textBox11
+            // txt_origemRota
             // 
-            this.textBox11.Location = new System.Drawing.Point(68, 95);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(261, 20);
-            this.textBox11.TabIndex = 5;
+            this.txt_origemRota.Location = new System.Drawing.Point(68, 95);
+            this.txt_origemRota.Name = "txt_origemRota";
+            this.txt_origemRota.Size = new System.Drawing.Size(261, 20);
+            this.txt_origemRota.TabIndex = 5;
             // 
-            // textBox10
+            // txt_rotaID
             // 
-            this.textBox10.Location = new System.Drawing.Point(69, 45);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(257, 20);
-            this.textBox10.TabIndex = 4;
+            this.txt_rotaID.Location = new System.Drawing.Point(69, 45);
+            this.txt_rotaID.Name = "txt_rotaID";
+            this.txt_rotaID.ReadOnly = true;
+            this.txt_rotaID.Size = new System.Drawing.Size(257, 20);
+            this.txt_rotaID.TabIndex = 4;
             // 
             // label13
             // 
@@ -999,7 +1006,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Motorista)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Rota)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
@@ -1043,10 +1050,10 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn_salvarMotorista;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txt_distanciaRota;
+        private System.Windows.Forms.TextBox txt_destinoRota;
+        private System.Windows.Forms.TextBox txt_origemRota;
+        private System.Windows.Forms.TextBox txt_rotaID;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -1091,7 +1098,7 @@
         private System.Windows.Forms.Button btn_LimparPreco;
         private System.Windows.Forms.Button btn_LimparViagem;
         private System.Windows.Forms.DataGridView dataGrid_Motorista;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGrid_Rota;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView4;
     }
