@@ -52,6 +52,14 @@ namespace ProjetoLogistica
             txt_rotaID.Enabled = false;
         }
 
+        private void BloquearCamposCombustivel()
+        {
+            cmb_combustivel.Enabled = false;
+            txt_precoCombustivel.Enabled = false;
+            dateTimeCombustivel.Enabled = false;
+            txt_combustivelID.Enabled = false;
+        }
+
         private void LiberarCamposVeiculo()
         {
             txt_Modelo.Enabled = true;
@@ -74,6 +82,14 @@ namespace ProjetoLogistica
             txt_distanciaRota.Enabled = true;
         }
 
+        private void LiberarCamposCombustivel()
+        {
+            cmb_combustivel.Enabled = true;
+            txt_precoCombustivel.Enabled = true;
+            dateTimeCombustivel.Enabled = true;
+            txt_combustivelID.Enabled = true;
+        }
+
         private void LimparCamposVeiculo()
         {
             txt_VeiculoID.Clear();
@@ -82,7 +98,7 @@ namespace ProjetoLogistica
             txt_Consumo.Clear();
             txt_Carga.Clear();
 
-            idVeiculoSelecionado = 0;
+            
         }
 
         private void LimparCamposMotorista()
@@ -92,7 +108,7 @@ namespace ProjetoLogistica
             txt_cnh.Clear();
             txt_Telefone.Clear();
 
-            idMotoristaSelecionado = 0;
+            
         }
 
         private void LimparCamposRota()
@@ -102,7 +118,16 @@ namespace ProjetoLogistica
             txt_destinoRota.Clear();
             txt_distanciaRota.Clear();
 
-            idRotaSelecionada = 0;
+            
+        }
+
+        private void LimparCamposCombustivel()
+        {
+            txt_combustivelID.Clear();
+            txt_precoCombustivel.Clear();
+            cmb_combustivel.Text = "";
+
+            
         }
 
         private void CarregarVeiculos()
@@ -208,6 +233,40 @@ namespace ProjetoLogistica
             }
         }
 
+        private void CarregarCombustivel()
+        {
+            try
+            {
+                using (MySqlConnection banco = new MySqlConnection(Conexao.ConexaoString))
+                {
+                    banco.Open();
+
+                    string sql = @"SELECT
+                                    PrecoID,
+                                    Combustivel,
+                                    Preco,
+                                    Data_consulta
+                                  FROM preco_combustivel";
+
+                    MySqlDataAdapter da = new MySqlDataAdapter(sql, banco);
+                    DataTable dt = new DataTable();
+
+                    da.Fill(dt);
+
+                    dataGrid_Combustivel.DataSource = dt;
+                }
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(
+                    "Erro ao buscar preços: " + erro.Message,
+                    "Erro",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
         private void EntrarModoEdicaoVeiculo()
         {
             modoEdicao = true;
@@ -254,6 +313,22 @@ namespace ProjetoLogistica
             btn_editarRota.Enabled = false;
             btn_buscarRota.Enabled = false;
             btn_LimparRota.Enabled = false;
+        }
+
+        private void EntrarModoEdicaoCombustivel()
+        {
+            modoEdicao = true;
+
+            LiberarCamposCombustivel();
+
+            btn_salvarPreco.Enabled = true;
+
+            btn_excluirPreco.Text = "Cancelar";
+            btn_excluirPreco.Enabled = true;
+
+            btn_editarPreco.Enabled = false;
+            btn_buscarPreco.Enabled = false;
+            btn_LimparPreco.Enabled = false;
         }
 
         private void SairModoEdicaoVeiculo()
@@ -314,6 +389,25 @@ namespace ProjetoLogistica
             txt_distanciaRota.Enabled = false;
         }
 
+        private void SairModoEdicaoCombustivel()
+        {
+            modoEdicao = false;
+
+            BloquearCamposCombustivel();
+
+            btn_excluirPreco.Text = "Excluir";
+
+            btn_salvarPreco.Enabled = true;
+            btn_excluirPreco.Enabled = true;
+            btn_editarPreco.Enabled = true;
+            btn_buscarPreco.Enabled = true;
+            btn_LimparPreco.Enabled = true;
+
+            cmb_combustivel.Enabled = false;
+            txt_precoCombustivel.Enabled = false;
+            dateTimeCombustivel.Enabled = false;
+        }
+
         private void btn_salvarVeiculo_Click(object sender, EventArgs e)
         {
             try
@@ -367,11 +461,9 @@ namespace ProjetoLogistica
 
                         comando.ExecuteNonQuery();
 
-                        txt_VeiculoID.Clear();
-                        txt_Modelo.Clear();
-                        txt_Placa.Clear();
-                        txt_Consumo.Clear();
-                        txt_Carga.Clear();
+                        LimparCamposVeiculo();
+
+                        idVeiculoSelecionado = 0;
 
                         txt_Modelo.Focus();
 
@@ -444,6 +536,8 @@ namespace ProjetoLogistica
 
                 LimparCamposVeiculo();
 
+                idVeiculoSelecionado = 0;
+
                 return;
             }
 
@@ -495,6 +589,8 @@ namespace ProjetoLogistica
         private void btn_LimparTelaVeiculo_Click(object sender, EventArgs e)
         {
             LimparCamposVeiculo();
+
+            idVeiculoSelecionado = 0;
 
             dataGrid_Veiculo.DataSource = null;
 
@@ -558,10 +654,9 @@ namespace ProjetoLogistica
 
                         comando.ExecuteNonQuery();
 
-                        txt_MotoristaID.Clear();
-                        txt_NomeMotorista.Clear();
-                        txt_cnh.Clear();
-                        txt_Telefone.Clear();
+                        LimparCamposMotorista();
+
+                        idMotoristaSelecionado = 0;
 
                         txt_NomeMotorista.Focus();
 
@@ -615,6 +710,8 @@ namespace ProjetoLogistica
 
                 LimparCamposMotorista();
 
+                idMotoristaSelecionado = 0;
+
                 return;
             }
 
@@ -666,6 +763,8 @@ namespace ProjetoLogistica
         private void btn_LimparMotorista_Click(object sender, EventArgs e)
         {
             LimparCamposMotorista();
+
+            idMotoristaSelecionado = 0;
 
             dataGrid_Motorista.DataSource = null;
 
@@ -746,10 +845,9 @@ namespace ProjetoLogistica
 
                         comando.ExecuteNonQuery();
 
-                        txt_rotaID.Clear();
-                        txt_origemRota.Clear();
-                        txt_destinoRota.Clear();
-                        txt_distanciaRota.Clear();
+                        LimparCamposRota();
+
+                        idRotaSelecionada = 0;
 
                         txt_origemRota.Focus();
 
@@ -802,6 +900,8 @@ namespace ProjetoLogistica
                 SairModoEdicaoRota();
 
                 LimparCamposRota();
+
+                idRotaSelecionada = 0;
 
                 return;
             }
@@ -856,6 +956,8 @@ namespace ProjetoLogistica
         {
             LimparCamposRota();
 
+            idRotaSelecionada = 0;
+
             dataGrid_Rota.DataSource = null;
 
             modoEdicao = false;
@@ -881,6 +983,197 @@ namespace ProjetoLogistica
 
                 idRotaSelecionada = Convert.ToInt32(
                     linha.Cells["RotaID"].Value);
+            }
+        }
+
+        private void btn_salvarPreco_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (MySqlConnection banco = new MySqlConnection(Conexao.ConexaoString))
+                {
+                    banco.Open();
+
+                    if (modoEdicao)
+                    {
+                        string sql = @"
+                            UPDATE Preco_combustivel
+                            SET
+                                Combustivel = @combustivel,
+                                Preco = @preco,
+                                Data_consulta = @data
+                            WHERE PrecoID = @ID";
+
+                        MySqlCommand comando = new MySqlCommand(sql, banco);
+
+                        comando.Parameters.AddWithValue("@ID", idPrecoSelecionado);
+                        comando.Parameters.AddWithValue("@combustivel", cmb_combustivel.Text);
+                        comando.Parameters.AddWithValue("@preco", Convert.ToDecimal(txt_precoCombustivel.Text));
+                        comando.Parameters.AddWithValue("@data", dateTimeCombustivel.Value);
+
+                        comando.ExecuteNonQuery();
+
+                        MessageBox.Show("Preço do combustivel atualizado com sucesso.");
+
+                        CarregarCombustivel();
+
+                        SairModoEdicaoCombustivel();
+
+                    }
+                    else
+                    {
+                        string sql = @"
+                            INSERT INTO preco_combustivel
+                            (combustivel, preco, data_consulta)
+                            VALUES
+                            (@combustivel, @preco, @data)";
+
+                        MySqlCommand comando = new MySqlCommand(sql, banco);
+
+                        comando.Parameters.AddWithValue("@ID", idPrecoSelecionado);
+                        comando.Parameters.AddWithValue("@combustivel", cmb_combustivel.Text);
+                        comando.Parameters.AddWithValue("@preco", txt_precoCombustivel.Text);
+                        comando.Parameters.AddWithValue("@data", dateTimeCombustivel.Value);
+
+                        comando.ExecuteNonQuery();
+
+                        LimparCamposCombustivel();
+
+                        idPrecoSelecionado = 0;
+
+                        cmb_combustivel.Focus();
+
+                        MessageBox.Show(
+                            "Preço do combustivel cadastrado com sucesso!",
+                            "Sucesso",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+
+                        CarregarCombustivel();
+
+                    }
+
+                }
+
+                modoEdicao = false;
+
+                BloquearCamposCombustivel();
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
+        }
+
+        private void btn_editarPreco_Click(object sender, EventArgs e)
+        {
+            CarregarCombustivel();
+
+            if (idPrecoSelecionado == 0)
+            {
+                MessageBox.Show("Selecione um Combustivel.");
+                return;
+            }
+
+            EntrarModoEdicaoCombustivel();
+        }
+
+        private void btn_buscarPreco_Click(object sender, EventArgs e)
+        {
+            CarregarCombustivel();
+            SairModoEdicaoCombustivel();
+        }
+
+        private void btn_excluirPreco_Click(object sender, EventArgs e)
+        {
+            if (modoEdicao)
+            {
+                SairModoEdicaoCombustivel();
+
+                LimparCamposCombustivel();
+
+                idPrecoSelecionado = 0;
+
+                return;
+            }
+
+            if (idPrecoSelecionado == 0)
+            {
+                MessageBox.Show("Selecione um combustivel para excluir.");
+                return;
+            }
+
+            DialogResult resultado = MessageBox.Show(
+                "Deseja realmente excluir este combustivel?",
+                "Confirmação",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                try
+                {
+                    using (MySqlConnection banco = new MySqlConnection(Conexao.ConexaoString))
+                    {
+                        banco.Open();
+
+                        string sql =
+                            "DELETE FROM preco_combustivel WHERE precoID = @ID";
+
+                        MySqlCommand comando = new MySqlCommand(sql, banco);
+
+                        comando.Parameters.AddWithValue("@ID", idPrecoSelecionado);
+
+                        comando.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Combustivel excluída com sucesso!");
+
+                    LimparCamposCombustivel();
+
+                    CarregarCombustivel();
+
+                    idPrecoSelecionado = 0;
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show("Erro ao excluir: " + erro.Message);
+                }
+            }
+        }
+
+        private void btn_LimparPreco_Click(object sender, EventArgs e)
+        {
+            LimparCamposCombustivel();
+
+            idPrecoSelecionado = 0;
+
+            dataGrid_Combustivel.DataSource = null;
+
+            modoEdicao = false;
+
+            btn_excluirPreco.Text = "Excluir";
+
+            LiberarCamposCombustivel();
+
+            cmb_combustivel.Focus();
+        }
+
+        private void dataGrid_Combustivel_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow linha = dataGrid_Combustivel.Rows[e.RowIndex];
+
+                txt_combustivelID.Text = linha.Cells["PrecoID"].Value.ToString();
+                cmb_combustivel.Text = linha.Cells["Combustivel"].Value.ToString();
+                txt_precoCombustivel.Text = linha.Cells["Preco"].Value.ToString();
+                dateTimeCombustivel.Value = Convert.ToDateTime(linha.Cells["Data_consulta"].Value);
+
+
+                idPrecoSelecionado = Convert.ToInt32(
+                    linha.Cells["PrecoID"].Value);
             }
         }
     }

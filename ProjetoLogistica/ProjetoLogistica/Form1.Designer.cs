@@ -77,12 +77,12 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGrid_Combustivel = new System.Windows.Forms.DataGridView();
             this.btn_LimparPreco = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.dateTimeCombustivel = new System.Windows.Forms.DateTimePicker();
+            this.cmb_combustivel = new System.Windows.Forms.ComboBox();
+            this.txt_precoCombustivel = new System.Windows.Forms.TextBox();
+            this.txt_combustivelID = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -118,7 +118,7 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Rota)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Combustivel)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
@@ -643,12 +643,12 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.dataGridView3);
+            this.tabPage4.Controls.Add(this.dataGrid_Combustivel);
             this.tabPage4.Controls.Add(this.btn_LimparPreco);
-            this.tabPage4.Controls.Add(this.dateTimePicker1);
-            this.tabPage4.Controls.Add(this.comboBox1);
-            this.tabPage4.Controls.Add(this.textBox16);
-            this.tabPage4.Controls.Add(this.textBox14);
+            this.tabPage4.Controls.Add(this.dateTimeCombustivel);
+            this.tabPage4.Controls.Add(this.cmb_combustivel);
+            this.tabPage4.Controls.Add(this.txt_precoCombustivel);
+            this.tabPage4.Controls.Add(this.txt_combustivelID);
             this.tabPage4.Controls.Add(this.label17);
             this.tabPage4.Controls.Add(this.label16);
             this.tabPage4.Controls.Add(this.label15);
@@ -664,13 +664,14 @@
             this.tabPage4.Text = "Preço Combustível";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // dataGridView3
+            // dataGrid_Combustivel
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(341, 49);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(433, 357);
-            this.dataGridView3.TabIndex = 15;
+            this.dataGrid_Combustivel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid_Combustivel.Location = new System.Drawing.Point(341, 49);
+            this.dataGrid_Combustivel.Name = "dataGrid_Combustivel";
+            this.dataGrid_Combustivel.Size = new System.Drawing.Size(433, 357);
+            this.dataGrid_Combustivel.TabIndex = 15;
+            this.dataGrid_Combustivel.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Combustivel_CellContentClick);
             // 
             // btn_LimparPreco
             // 
@@ -682,35 +683,42 @@
             this.btn_LimparPreco.TabIndex = 14;
             this.btn_LimparPreco.Text = "Limpar";
             this.btn_LimparPreco.UseVisualStyleBackColor = true;
+            this.btn_LimparPreco.Click += new System.EventHandler(this.btn_LimparPreco_Click);
             // 
-            // dateTimePicker1
+            // dateTimeCombustivel
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(108, 195);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(218, 20);
-            this.dateTimePicker1.TabIndex = 13;
+            this.dateTimeCombustivel.Location = new System.Drawing.Point(108, 195);
+            this.dateTimeCombustivel.Name = "dateTimeCombustivel";
+            this.dateTimeCombustivel.Size = new System.Drawing.Size(218, 20);
+            this.dateTimeCombustivel.TabIndex = 13;
             // 
-            // comboBox1
+            // cmb_combustivel
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(98, 94);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(228, 21);
-            this.comboBox1.TabIndex = 12;
+            this.cmb_combustivel.FormattingEnabled = true;
+            this.cmb_combustivel.Items.AddRange(new object[] {
+            "Etanol",
+            "Gasolina",
+            "Diesel",
+            "GNV"});
+            this.cmb_combustivel.Location = new System.Drawing.Point(98, 94);
+            this.cmb_combustivel.Name = "cmb_combustivel";
+            this.cmb_combustivel.Size = new System.Drawing.Size(228, 21);
+            this.cmb_combustivel.TabIndex = 12;
             // 
-            // textBox16
+            // txt_precoCombustivel
             // 
-            this.textBox16.Location = new System.Drawing.Point(60, 145);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(266, 20);
-            this.textBox16.TabIndex = 6;
+            this.txt_precoCombustivel.Location = new System.Drawing.Point(60, 145);
+            this.txt_precoCombustivel.Name = "txt_precoCombustivel";
+            this.txt_precoCombustivel.Size = new System.Drawing.Size(266, 20);
+            this.txt_precoCombustivel.TabIndex = 6;
             // 
-            // textBox14
+            // txt_combustivelID
             // 
-            this.textBox14.Location = new System.Drawing.Point(114, 45);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(212, 20);
-            this.textBox14.TabIndex = 4;
+            this.txt_combustivelID.Location = new System.Drawing.Point(114, 45);
+            this.txt_combustivelID.Name = "txt_combustivelID";
+            this.txt_combustivelID.ReadOnly = true;
+            this.txt_combustivelID.Size = new System.Drawing.Size(212, 20);
+            this.txt_combustivelID.TabIndex = 4;
             // 
             // label17
             // 
@@ -762,6 +770,7 @@
             this.btn_excluirPreco.TabIndex = 11;
             this.btn_excluirPreco.Text = "Excluir";
             this.btn_excluirPreco.UseVisualStyleBackColor = true;
+            this.btn_excluirPreco.Click += new System.EventHandler(this.btn_excluirPreco_Click);
             // 
             // btn_buscarPreco
             // 
@@ -773,6 +782,7 @@
             this.btn_buscarPreco.TabIndex = 10;
             this.btn_buscarPreco.Text = "  Buscar";
             this.btn_buscarPreco.UseVisualStyleBackColor = true;
+            this.btn_buscarPreco.Click += new System.EventHandler(this.btn_buscarPreco_Click);
             // 
             // btn_editarPreco
             // 
@@ -784,6 +794,7 @@
             this.btn_editarPreco.TabIndex = 9;
             this.btn_editarPreco.Text = "Editar";
             this.btn_editarPreco.UseVisualStyleBackColor = true;
+            this.btn_editarPreco.Click += new System.EventHandler(this.btn_editarPreco_Click);
             // 
             // btn_salvarPreco
             // 
@@ -795,6 +806,7 @@
             this.btn_salvarPreco.TabIndex = 8;
             this.btn_salvarPreco.Text = "Salvar";
             this.btn_salvarPreco.UseVisualStyleBackColor = true;
+            this.btn_salvarPreco.Click += new System.EventHandler(this.btn_salvarPreco_Click);
             // 
             // tabPage5
             // 
@@ -1009,7 +1021,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Rota)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Combustivel)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
@@ -1062,14 +1074,14 @@
         private System.Windows.Forms.Button btn_buscarRota;
         private System.Windows.Forms.Button btn_editarRota;
         private System.Windows.Forms.Button btn_salvarRota;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txt_precoCombustivel;
+        private System.Windows.Forms.TextBox txt_combustivelID;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker dateTimeCombustivel;
+        private System.Windows.Forms.ComboBox cmb_combustivel;
         private System.Windows.Forms.Button btn_excluirPreco;
         private System.Windows.Forms.Button btn_buscarPreco;
         private System.Windows.Forms.Button btn_editarPreco;
@@ -1099,7 +1111,7 @@
         private System.Windows.Forms.Button btn_LimparViagem;
         private System.Windows.Forms.DataGridView dataGrid_Motorista;
         private System.Windows.Forms.DataGridView dataGrid_Rota;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dataGrid_Combustivel;
         private System.Windows.Forms.DataGridView dataGridView4;
     }
 }
