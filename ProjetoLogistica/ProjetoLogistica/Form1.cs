@@ -408,6 +408,72 @@ namespace ProjetoLogistica
             dateTimeCombustivel.Enabled = false;
         }
 
+        private void CarregarComboBoxVeiculos()
+        {
+            using (MySqlConnection conexao =
+                new MySqlConnection(Conexao.ConexaoString))
+            {
+                string sql =
+                    "SELECT veiculoID, placa FROM veiculo";
+
+                MySqlDataAdapter da =
+                    new MySqlDataAdapter(sql, conexao);
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                cmb_Veiculo.DataSource = dt;
+                cmb_Veiculo.DisplayMember = "placa";
+                cmb_Veiculo.ValueMember = "veiculoID";
+            }
+        }
+
+        private void CarregarComboBoxMotoristas()
+        {
+            using (MySqlConnection conexao =
+                new MySqlConnection(Conexao.ConexaoString))
+            {
+                string sql =
+                    "SELECT motoristaID, nome FROM motorista";
+
+                MySqlDataAdapter da =
+                    new MySqlDataAdapter(sql, conexao);
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                cmb_Motorista.DataSource = dt;
+                cmb_Motorista.DisplayMember = "nome";
+                cmb_Motorista.ValueMember = "motoristaID";
+            }
+        }
+
+        private void CarregarComboBoxRotas()
+        {
+            using (MySqlConnection conexao =
+                new MySqlConnection(Conexao.ConexaoString))
+            {
+                string sql =
+                    @"SELECT rotaID,
+                     CONCAT(origem,' -> ',destino) AS rota
+              FROM rota";
+
+                MySqlDataAdapter da =
+                    new MySqlDataAdapter(sql, conexao);
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                cmb_Rota.DataSource = dt;
+                cmb_Rota.DisplayMember = "rota";
+                cmb_Rota.ValueMember = "rotaID";
+            }
+        }
+
+
         private void btn_salvarVeiculo_Click(object sender, EventArgs e)
         {
             try
@@ -1175,6 +1241,58 @@ namespace ProjetoLogistica
                 idPrecoSelecionado = Convert.ToInt32(
                     linha.Cells["PrecoID"].Value);
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            CarregarComboBoxVeiculos();
+            CarregarComboBoxMotoristas();
+            CarregarComboBoxRotas();
+
+
+        }
+
+        private void btn_salvarViagem_Click(object sender, EventArgs e)
+        {
+            MySqlConnection conexao =
+                new MySqlConnection(Conexao.ConexaoString);
+
+            conexao.Open();
+
+            string sql = @"INSERT INTO viagem
+            (
+                veiculoID,
+                motoristaID,
+                rotaID,
+                data_saida,
+                data_chegada,
+                situacao
+            )
+            VALUES
+            (
+                @veiculo,
+                @motorista,
+                @rota,
+                @saida,
+                @chegada,
+                @situacao
+            )";
+
+            MySqlCommand comando =
+                new MySqlCommand(sql, conexao);
+
+            comando.Parameters.AddWithValue("@veiculo", cmb_Veiculo.SelectedValue);
+            comando.Parameters.AddWithValue("@motorista", cmb_Motorista.SelectedValue);
+            comando.Parameters.AddWithValue("@rota", cmb_Rota.SelectedValue);
+            comando.Parameters.AddWithValue("@saida", dateTimeSaida.Value);
+            comando.Parameters.AddWithValue("@chegada", dateTimeChegada.Value);
+
+            comando.ExecuteNonQuery();
+
+            MessageBox.Show(
+                "Viagem cadastrada com sucesso!");
+
+            conexao.Close();
         }
     }
 }

@@ -92,18 +92,24 @@
             this.btn_editarPreco = new System.Windows.Forms.Button();
             this.btn_salvarPreco = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.cmb_Motorista = new System.Windows.Forms.ComboBox();
+            this.cmb_Rota = new System.Windows.Forms.ComboBox();
+            this.cmb_Veiculo = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_Filtros = new System.Windows.Forms.Button();
+            this.cmb_Viagem = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.btn_Detalhes = new System.Windows.Forms.Button();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.btn_LimparViagem = new System.Windows.Forms.Button();
             this.btn_excluirViagem = new System.Windows.Forms.Button();
             this.btn_buscarViagem = new System.Windows.Forms.Button();
             this.btn_editarViagem = new System.Windows.Forms.Button();
             this.btn_salvarViagem = new System.Windows.Forms.Button();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimeChegada = new System.Windows.Forms.DateTimePicker();
+            this.dateTimeSaida = new System.Windows.Forms.DateTimePicker();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -120,6 +126,7 @@
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Combustivel)).BeginInit();
             this.tabPage5.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -810,18 +817,20 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.cmb_Motorista);
+            this.tabPage5.Controls.Add(this.cmb_Rota);
+            this.tabPage5.Controls.Add(this.cmb_Veiculo);
+            this.tabPage5.Controls.Add(this.groupBox1);
+            this.tabPage5.Controls.Add(this.btn_Detalhes);
             this.tabPage5.Controls.Add(this.dataGridView4);
             this.tabPage5.Controls.Add(this.btn_LimparViagem);
             this.tabPage5.Controls.Add(this.btn_excluirViagem);
             this.tabPage5.Controls.Add(this.btn_buscarViagem);
             this.tabPage5.Controls.Add(this.btn_editarViagem);
             this.tabPage5.Controls.Add(this.btn_salvarViagem);
-            this.tabPage5.Controls.Add(this.textBox19);
-            this.tabPage5.Controls.Add(this.textBox18);
-            this.tabPage5.Controls.Add(this.textBox17);
             this.tabPage5.Controls.Add(this.textBox15);
-            this.tabPage5.Controls.Add(this.dateTimePicker3);
-            this.tabPage5.Controls.Add(this.dateTimePicker2);
+            this.tabPage5.Controls.Add(this.dateTimeChegada);
+            this.tabPage5.Controls.Add(this.dateTimeSaida);
             this.tabPage5.Controls.Add(this.label23);
             this.tabPage5.Controls.Add(this.label22);
             this.tabPage5.Controls.Add(this.label21);
@@ -835,12 +844,97 @@
             this.tabPage5.Text = "Viagem";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // cmb_Motorista
+            // 
+            this.cmb_Motorista.FormattingEnabled = true;
+            this.cmb_Motorista.Location = new System.Drawing.Point(79, 294);
+            this.cmb_Motorista.Name = "cmb_Motorista";
+            this.cmb_Motorista.Size = new System.Drawing.Size(247, 21);
+            this.cmb_Motorista.TabIndex = 26;
+            // 
+            // cmb_Rota
+            // 
+            this.cmb_Rota.FormattingEnabled = true;
+            this.cmb_Rota.Location = new System.Drawing.Point(53, 244);
+            this.cmb_Rota.Name = "cmb_Rota";
+            this.cmb_Rota.Size = new System.Drawing.Size(273, 21);
+            this.cmb_Rota.TabIndex = 25;
+            // 
+            // cmb_Veiculo
+            // 
+            this.cmb_Veiculo.FormattingEnabled = true;
+            this.cmb_Veiculo.Location = new System.Drawing.Point(69, 194);
+            this.cmb_Veiculo.Name = "cmb_Veiculo";
+            this.cmb_Veiculo.Size = new System.Drawing.Size(257, 21);
+            this.cmb_Veiculo.TabIndex = 24;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btn_Filtros);
+            this.groupBox1.Controls.Add(this.cmb_Viagem);
+            this.groupBox1.Controls.Add(this.label24);
+            this.groupBox1.Controls.Add(this.label25);
+            this.groupBox1.Location = new System.Drawing.Point(341, 15);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(433, 112);
+            this.groupBox1.TabIndex = 23;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Filtros da Consulta";
+            // 
+            // btn_Filtros
+            // 
+            this.btn_Filtros.Location = new System.Drawing.Point(341, 76);
+            this.btn_Filtros.Name = "btn_Filtros";
+            this.btn_Filtros.Size = new System.Drawing.Size(92, 23);
+            this.btn_Filtros.TabIndex = 21;
+            this.btn_Filtros.Text = "Aplicar Filtros";
+            this.btn_Filtros.UseVisualStyleBackColor = true;
+            // 
+            // cmb_Viagem
+            // 
+            this.cmb_Viagem.FormattingEnabled = true;
+            this.cmb_Viagem.Items.AddRange(new object[] {
+            "Concluída",
+            "Em Andamento"});
+            this.cmb_Viagem.Location = new System.Drawing.Point(49, 78);
+            this.cmb_Viagem.Name = "cmb_Viagem";
+            this.cmb_Viagem.Size = new System.Drawing.Size(121, 21);
+            this.cmb_Viagem.TabIndex = 20;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(143, 16);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(144, 16);
+            this.label24.TabIndex = 18;
+            this.label24.Text = "CONSULTAR VIAGEM";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(6, 86);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(37, 13);
+            this.label25.TabIndex = 19;
+            this.label25.Text = "Status";
+            // 
+            // btn_Detalhes
+            // 
+            this.btn_Detalhes.Location = new System.Drawing.Point(699, 384);
+            this.btn_Detalhes.Name = "btn_Detalhes";
+            this.btn_Detalhes.Size = new System.Drawing.Size(75, 23);
+            this.btn_Detalhes.TabIndex = 22;
+            this.btn_Detalhes.Text = "Detalhes";
+            this.btn_Detalhes.UseVisualStyleBackColor = true;
+            // 
             // dataGridView4
             // 
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(341, 49);
+            this.dataGridView4.Location = new System.Drawing.Point(341, 145);
             this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(433, 357);
+            this.dataGridView4.Size = new System.Drawing.Size(433, 233);
             this.dataGridView4.TabIndex = 17;
             // 
             // btn_LimparViagem
@@ -897,48 +991,29 @@
             this.btn_salvarViagem.TabIndex = 12;
             this.btn_salvarViagem.Text = "Salvar";
             this.btn_salvarViagem.UseVisualStyleBackColor = true;
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(79, 295);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(247, 20);
-            this.textBox19.TabIndex = 11;
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(53, 245);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(273, 20);
-            this.textBox18.TabIndex = 10;
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(69, 195);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(257, 20);
-            this.textBox17.TabIndex = 9;
+            this.btn_salvarViagem.Click += new System.EventHandler(this.btn_salvarViagem_Click);
             // 
             // textBox15
             // 
             this.textBox15.Location = new System.Drawing.Point(87, 45);
             this.textBox15.Name = "textBox15";
+            this.textBox15.ReadOnly = true;
             this.textBox15.Size = new System.Drawing.Size(239, 20);
             this.textBox15.TabIndex = 8;
             // 
-            // dateTimePicker3
+            // dateTimeChegada
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(74, 145);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(252, 20);
-            this.dateTimePicker3.TabIndex = 7;
+            this.dateTimeChegada.Location = new System.Drawing.Point(74, 145);
+            this.dateTimeChegada.Name = "dateTimeChegada";
+            this.dateTimeChegada.Size = new System.Drawing.Size(252, 20);
+            this.dateTimeChegada.TabIndex = 7;
             // 
-            // dateTimePicker2
+            // dateTimeSaida
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(55, 95);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(271, 20);
-            this.dateTimePicker2.TabIndex = 6;
+            this.dateTimeSaida.Location = new System.Drawing.Point(55, 95);
+            this.dateTimeSaida.Name = "dateTimeSaida";
+            this.dateTimeSaida.Size = new System.Drawing.Size(271, 20);
+            this.dateTimeSaida.TabIndex = 6;
             // 
             // label23
             // 
@@ -1009,6 +1084,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -1024,6 +1100,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Combustivel)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
 
@@ -1089,12 +1167,9 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimeChegada;
+        private System.Windows.Forms.DateTimePicker dateTimeSaida;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
@@ -1113,6 +1188,15 @@
         private System.Windows.Forms.DataGridView dataGrid_Rota;
         private System.Windows.Forms.DataGridView dataGrid_Combustivel;
         private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.Button btn_Filtros;
+        private System.Windows.Forms.ComboBox cmb_Viagem;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btn_Detalhes;
+        private System.Windows.Forms.ComboBox cmb_Motorista;
+        private System.Windows.Forms.ComboBox cmb_Rota;
+        private System.Windows.Forms.ComboBox cmb_Veiculo;
     }
 }
 
