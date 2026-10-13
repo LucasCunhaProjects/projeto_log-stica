@@ -60,6 +60,16 @@ namespace ProjetoLogistica
             txt_combustivelID.Enabled = false;
         }
 
+        private void BloquearCamposViagem()
+        {
+            dateTimeSaida.Enabled = false;
+            dateTimeChegada.Enabled = false;
+            cmb_Veiculo.Enabled = false;
+            cmb_Rota.Enabled = false;
+            cmb_Motorista.Enabled = false;
+        }
+
+
         private void LiberarCamposVeiculo()
         {
             txt_Modelo.Enabled = true;
@@ -88,6 +98,15 @@ namespace ProjetoLogistica
             txt_precoCombustivel.Enabled = true;
             dateTimeCombustivel.Enabled = true;
             txt_combustivelID.Enabled = true;
+        }
+
+        private void LiberarCamposViagem()
+        {
+            dateTimeSaida.Enabled = true;
+            dateTimeChegada.Enabled = true;
+            cmb_Veiculo.Enabled = true;
+            cmb_Rota.Enabled = true;
+            cmb_Motorista.Enabled = true;
         }
 
         private void LimparCamposVeiculo()
@@ -128,6 +147,18 @@ namespace ProjetoLogistica
             cmb_combustivel.Text = "";
 
             
+        }
+
+        private void LimparCamposViagem()
+        {
+            dateTimeSaida.Value = DateTime.Now;
+            dateTimeChegada.Checked = false;
+            dateTimeChegada.Value = DateTime.Now;
+            cmb_Veiculo.Text = "";
+            cmb_Rota.Text = "";
+            cmb_Motorista.Text = "";
+
+
         }
 
         private void CarregarVeiculos()
@@ -331,6 +362,22 @@ namespace ProjetoLogistica
             btn_LimparPreco.Enabled = false;
         }
 
+        private void EntrarModoEdicaoViagem()
+        {
+            modoEdicao = true;
+
+            LiberarCamposViagem();
+
+            btn_salvarViagem.Enabled = true;
+
+            btn_excluirViagem.Text = "Cancelar";
+            btn_excluirViagem.Enabled = true;
+
+            btn_editarViagem.Enabled = false;
+            btn_buscarViagem.Enabled = false;
+            btn_LimparViagem.Enabled = false;
+        }
+
         private void SairModoEdicaoVeiculo()
         {
             modoEdicao = false;
@@ -408,13 +455,37 @@ namespace ProjetoLogistica
             dateTimeCombustivel.Enabled = false;
         }
 
+        private void SairModoEdicaoViagem()
+        {
+            modoEdicao = false;
+
+            BloquearCamposViagem();
+
+            btn_excluirViagem.Text = "Excluir";
+
+            btn_salvarViagem.Enabled = true;
+            btn_excluirViagem.Enabled = true;
+            btn_editarViagem.Enabled = true;
+            btn_buscarViagem.Enabled = true;
+            btn_LimparViagem.Enabled = true;
+
+            dateTimeSaida.Enabled = false;
+            dateTimeChegada.Enabled = false;
+            cmb_Veiculo.Enabled = false;
+            cmb_Rota.Enabled = false;
+            cmb_Motorista.Enabled = false;
+        }
+
         private void CarregarComboBoxVeiculos()
         {
             using (MySqlConnection conexao =
                 new MySqlConnection(Conexao.ConexaoString))
             {
-                string sql =
-                    "SELECT veiculoID, placa FROM veiculo";
+                string sql = @"
+                    SELECT
+                        veiculoID,
+                        CONCAT(modelo, ' - ', placa) AS VeiculoCompleto
+                    FROM veiculo";
 
                 MySqlDataAdapter da =
                     new MySqlDataAdapter(sql, conexao);
@@ -424,7 +495,7 @@ namespace ProjetoLogistica
                 da.Fill(dt);
 
                 cmb_Veiculo.DataSource = dt;
-                cmb_Veiculo.DisplayMember = "placa";
+                cmb_Veiculo.DisplayMember = "VeiculoCompleto";
                 cmb_Veiculo.ValueMember = "veiculoID";
             }
         }
@@ -470,6 +541,38 @@ namespace ProjetoLogistica
                 cmb_Rota.DataSource = dt;
                 cmb_Rota.DisplayMember = "rota";
                 cmb_Rota.ValueMember = "rotaID";
+            }
+        }
+
+        private void CarregarViagens()
+        {
+            using (MySqlConnection conexao =
+                new MySqlConnection(Conexao.ConexaoString))
+            {
+                string sql = @"
+                SELECT
+                    v.viagemID,
+                    ve.modelo,
+                    ve.placa,
+                    m.nome,
+                    r.origem,
+                    r.destino,
+                    v.data_saida,
+                    v.data_chegada,
+                    v.situacao
+                FROM viagem v
+                INNER JOIN veiculo ve ON v.veiculoID = ve.veiculoID
+                INNER JOIN motorista m ON v.motoristaID = m.motoristaID
+                INNER JOIN rota r ON v.rotaID = r.rotaID";
+
+                MySqlDataAdapter da =
+                    new MySqlDataAdapter(sql, conexao);
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                dataGrid_Viagem.DataSource = dt;
             }
         }
 
@@ -1245,6 +1348,9 @@ namespace ProjetoLogistica
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            dateTimeChegada.ShowCheckBox = true;
+            dateTimeChegada.Checked = false;
             CarregarComboBoxVeiculos();
             CarregarComboBoxMotoristas();
             CarregarComboBoxRotas();
@@ -1281,18 +1387,114 @@ namespace ProjetoLogistica
             MySqlCommand comando =
                 new MySqlCommand(sql, conexao);
 
+            string situacao;
+
+            if (dateTimeChegada.Checked)
+            {
+                situacao = "Concluída";
+            }
+            else
+            {
+                situacao = "Em Andamento";
+            }
+
             comando.Parameters.AddWithValue("@veiculo", cmb_Veiculo.SelectedValue);
             comando.Parameters.AddWithValue("@motorista", cmb_Motorista.SelectedValue);
             comando.Parameters.AddWithValue("@rota", cmb_Rota.SelectedValue);
             comando.Parameters.AddWithValue("@saida", dateTimeSaida.Value);
             comando.Parameters.AddWithValue("@chegada", dateTimeChegada.Value);
+            comando.Parameters.AddWithValue("@situacao", situacao);
+            
 
             comando.ExecuteNonQuery();
 
             MessageBox.Show(
                 "Viagem cadastrada com sucesso!");
 
+            CarregarViagens();
+
             conexao.Close();
+        }
+
+        private void btn_LimparViagem_Click(object sender, EventArgs e)
+        {
+            LimparCamposViagem();
+
+            idViagemSelecionada = 0;
+
+            dataGrid_Viagem.DataSource = null;
+
+            modoEdicao = false;
+
+            btn_excluirViagem.Text = "Excluir";
+
+            LiberarCamposViagem();
+
+            dateTimeSaida.Focus();
+        }
+
+        private void btn_buscarViagem_Click(object sender, EventArgs e)
+        {
+            CarregarViagens();
+            SairModoEdicaoViagem();
+        }
+
+        private void btn_excluirViagem_Click(object sender, EventArgs e)
+        {
+            if (modoEdicao)
+            {
+                SairModoEdicaoViagem();
+
+                LimparCamposViagem();
+
+                idViagemSelecionada = 0;
+
+                return;
+            }
+
+            if (idViagemSelecionada == 0)
+            {
+                MessageBox.Show("Selecione uma viagem para excluir.");
+                return;
+            }
+
+            DialogResult resultado = MessageBox.Show(
+                "Deseja realmente excluir esta viagem?",
+                "Confirmação",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                try
+                {
+                    using (MySqlConnection banco = new MySqlConnection(Conexao.ConexaoString))
+                    {
+                        banco.Open();
+
+                        string sql =
+                            "DELETE FROM viagem WHERE viagemID = @ID";
+
+                        MySqlCommand comando = new MySqlCommand(sql, banco);
+
+                        comando.Parameters.AddWithValue("@ID", idViagemSelecionada);
+
+                        comando.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Viagem excluída com sucesso!");
+
+                    LimparCamposViagem();
+
+                    CarregarViagens();
+
+                    idViagemSelecionada = 0;
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show("Erro ao excluir: " + erro.Message);
+                }
+            }
         }
     }
 }

@@ -101,7 +101,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.btn_Detalhes = new System.Windows.Forms.Button();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dataGrid_Viagem = new System.Windows.Forms.DataGridView();
             this.btn_LimparViagem = new System.Windows.Forms.Button();
             this.btn_excluirViagem = new System.Windows.Forms.Button();
             this.btn_buscarViagem = new System.Windows.Forms.Button();
@@ -127,7 +127,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Combustivel)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Viagem)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -822,7 +822,7 @@
             this.tabPage5.Controls.Add(this.cmb_Veiculo);
             this.tabPage5.Controls.Add(this.groupBox1);
             this.tabPage5.Controls.Add(this.btn_Detalhes);
-            this.tabPage5.Controls.Add(this.dataGridView4);
+            this.tabPage5.Controls.Add(this.dataGrid_Viagem);
             this.tabPage5.Controls.Add(this.btn_LimparViagem);
             this.tabPage5.Controls.Add(this.btn_excluirViagem);
             this.tabPage5.Controls.Add(this.btn_buscarViagem);
@@ -929,13 +929,13 @@
             this.btn_Detalhes.Text = "Detalhes";
             this.btn_Detalhes.UseVisualStyleBackColor = true;
             // 
-            // dataGridView4
+            // dataGrid_Viagem
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(341, 145);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(433, 233);
-            this.dataGridView4.TabIndex = 17;
+            this.dataGrid_Viagem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid_Viagem.Location = new System.Drawing.Point(341, 145);
+            this.dataGrid_Viagem.Name = "dataGrid_Viagem";
+            this.dataGrid_Viagem.Size = new System.Drawing.Size(433, 233);
+            this.dataGrid_Viagem.TabIndex = 17;
             // 
             // btn_LimparViagem
             // 
@@ -947,6 +947,7 @@
             this.btn_LimparViagem.TabIndex = 16;
             this.btn_LimparViagem.Text = "Limpar";
             this.btn_LimparViagem.UseVisualStyleBackColor = true;
+            this.btn_LimparViagem.Click += new System.EventHandler(this.btn_LimparViagem_Click);
             // 
             // btn_excluirViagem
             // 
@@ -958,6 +959,7 @@
             this.btn_excluirViagem.TabIndex = 15;
             this.btn_excluirViagem.Text = "Excluir";
             this.btn_excluirViagem.UseVisualStyleBackColor = true;
+            this.btn_excluirViagem.Click += new System.EventHandler(this.btn_excluirViagem_Click);
             // 
             // btn_buscarViagem
             // 
@@ -969,6 +971,7 @@
             this.btn_buscarViagem.TabIndex = 14;
             this.btn_buscarViagem.Text = "  Buscar";
             this.btn_buscarViagem.UseVisualStyleBackColor = true;
+            this.btn_buscarViagem.Click += new System.EventHandler(this.btn_buscarViagem_Click);
             // 
             // btn_editarViagem
             // 
@@ -1102,7 +1105,7 @@
             this.tabPage5.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Viagem)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1187,7 +1190,7 @@
         private System.Windows.Forms.DataGridView dataGrid_Motorista;
         private System.Windows.Forms.DataGridView dataGrid_Rota;
         private System.Windows.Forms.DataGridView dataGrid_Combustivel;
-        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridView dataGrid_Viagem;
         private System.Windows.Forms.Button btn_Filtros;
         private System.Windows.Forms.ComboBox cmb_Viagem;
         private System.Windows.Forms.Label label25;
