@@ -151,12 +151,14 @@ namespace ProjetoLogistica
 
         private void LimparCamposViagem()
         {
+            txt_viagemID.Clear();
             dateTimeSaida.Value = DateTime.Now;
             dateTimeChegada.Checked = false;
             dateTimeChegada.Value = DateTime.Now;
-            cmb_Veiculo.Text = "";
-            cmb_Rota.Text = "";
-            cmb_Motorista.Text = "";
+            cmb_Veiculo.SelectedIndex = 0;
+            cmb_Rota.SelectedIndex = 0;
+            cmb_Motorista.SelectedIndex = 0;
+            cmb_Status.SelectedIndex = 0;
 
 
         }
@@ -178,6 +180,7 @@ namespace ProjetoLogistica
                                   FROM veiculo";
 
                     MySqlDataAdapter da = new MySqlDataAdapter(sql, banco);
+
                     DataTable dt = new DataTable();
 
                     da.Fill(dt);
@@ -212,6 +215,7 @@ namespace ProjetoLogistica
                                   FROM motorista";
 
                     MySqlDataAdapter da = new MySqlDataAdapter(sql, banco);
+
                     DataTable dt = new DataTable();
 
                     da.Fill(dt);
@@ -246,6 +250,7 @@ namespace ProjetoLogistica
                                   FROM rota";
 
                     MySqlDataAdapter da = new MySqlDataAdapter(sql, banco);
+
                     DataTable dt = new DataTable();
 
                     da.Fill(dt);
@@ -280,6 +285,7 @@ namespace ProjetoLogistica
                                   FROM preco_combustivel";
 
                     MySqlDataAdapter da = new MySqlDataAdapter(sql, banco);
+
                     DataTable dt = new DataTable();
 
                     da.Fill(dt);
@@ -478,8 +484,7 @@ namespace ProjetoLogistica
 
         private void CarregarComboBoxVeiculos()
         {
-            using (MySqlConnection conexao =
-                new MySqlConnection(Conexao.ConexaoString))
+            using (MySqlConnection conexao = new MySqlConnection(Conexao.ConexaoString))
             {
                 string sql = @"
                     SELECT
@@ -487,86 +492,122 @@ namespace ProjetoLogistica
                         CONCAT(modelo, ' - ', placa) AS VeiculoCompleto
                     FROM veiculo";
 
-                MySqlDataAdapter da =
-                    new MySqlDataAdapter(sql, conexao);
+                MySqlDataAdapter da = new MySqlDataAdapter(sql, conexao);
 
                 DataTable dt = new DataTable();
 
                 da.Fill(dt);
 
+
+                DataRow linha = dt.NewRow();
+                linha["veiculoID"] = 0;
+                linha["VeiculoCompleto"] = "Selecione um veículo";
+                dt.Rows.InsertAt(linha, 0);
+
                 cmb_Veiculo.DataSource = dt;
                 cmb_Veiculo.DisplayMember = "VeiculoCompleto";
                 cmb_Veiculo.ValueMember = "veiculoID";
+
+
+                cmb_Veiculo.SelectedIndex = 0;
+
             }
         }
 
         private void CarregarComboBoxMotoristas()
         {
-            using (MySqlConnection conexao =
-                new MySqlConnection(Conexao.ConexaoString))
+
+            using (MySqlConnection conexao = new MySqlConnection(Conexao.ConexaoString))
             {
                 string sql =
                     "SELECT motoristaID, nome FROM motorista";
 
-                MySqlDataAdapter da =
-                    new MySqlDataAdapter(sql, conexao);
+                MySqlDataAdapter da = new MySqlDataAdapter(sql, conexao);
 
                 DataTable dt = new DataTable();
 
                 da.Fill(dt);
 
+
+                DataRow linha = dt.NewRow();
+                linha["motoristaID"] = 0;
+                linha["nome"] = "Selecione um motorista";
+                dt.Rows.InsertAt(linha, 0);
+
                 cmb_Motorista.DataSource = dt;
                 cmb_Motorista.DisplayMember = "nome";
                 cmb_Motorista.ValueMember = "motoristaID";
+
+                cmb_Motorista.SelectedIndex = 0;
+
             }
         }
 
         private void CarregarComboBoxRotas()
         {
-            using (MySqlConnection conexao =
-                new MySqlConnection(Conexao.ConexaoString))
+            using (MySqlConnection conexao = new MySqlConnection(Conexao.ConexaoString))
             {
                 string sql =
-                    @"SELECT rotaID,
-                     CONCAT(origem,' -> ',destino) AS rota
-              FROM rota";
+                    @"SELECT
+                        rotaID,
+                        CONCAT(origem,' → ',destino) AS rota
+                    FROM rota";
 
-                MySqlDataAdapter da =
-                    new MySqlDataAdapter(sql, conexao);
+                MySqlDataAdapter da = new MySqlDataAdapter(sql, conexao);
 
                 DataTable dt = new DataTable();
 
                 da.Fill(dt);
 
+
+                DataRow linha = dt.NewRow();
+                linha["rotaID"] = 0;
+                linha["rota"] = "Selecione uma rota";
+                dt.Rows.InsertAt(linha, 0);
+
                 cmb_Rota.DataSource = dt;
                 cmb_Rota.DisplayMember = "rota";
                 cmb_Rota.ValueMember = "rotaID";
+
+                cmb_Rota.SelectedIndex = 0;
             }
+        }
+
+        private void CarregarComboBoxStatus()
+        {
+            cmb_Status.Items.Clear();
+
+            cmb_Status.Items.Add("Todos");
+            cmb_Status.Items.Add("Em Andamento");
+            cmb_Status.Items.Add("Concluída");
+
+            cmb_Status.SelectedIndex = 0;
         }
 
         private void CarregarViagens()
         {
-            using (MySqlConnection conexao =
-                new MySqlConnection(Conexao.ConexaoString))
+            using (MySqlConnection conexao = new MySqlConnection(Conexao.ConexaoString))
             {
                 string sql = @"
                 SELECT
-                    v.viagemID,
-                    ve.modelo,
-                    ve.placa,
-                    m.nome,
-                    r.origem,
-                    r.destino,
-                    v.data_saida,
-                    v.data_chegada,
-                    v.situacao
-                FROM viagem v
-                INNER JOIN veiculo ve ON v.veiculoID = ve.veiculoID
-                INNER JOIN motorista m ON v.motoristaID = m.motoristaID
-                INNER JOIN rota r ON v.rotaID = r.rotaID";
+                    viagem.viagemID,
+                    veiculo.modelo,
+                    veiculo.placa,
+                    motorista.nome,
+                    rota.origem,
+                    rota.destino,
+                    viagem.data_saida,
+                    viagem.data_chegada,
+                    viagem.situacao,
+                    viagem.veiculoID,
+                    viagem.motoristaID,
+                    viagem.rotaID
+                FROM viagem
+                INNER JOIN veiculo ON viagem.veiculoID = veiculo.veiculoID
+                INNER JOIN motorista ON viagem.motoristaID = motorista.motoristaID
+                INNER JOIN rota ON viagem.rotaID = rota.rotaID";
 
-                MySqlDataAdapter da =
-                    new MySqlDataAdapter(sql, conexao);
+                MySqlDataAdapter da = new MySqlDataAdapter(sql, conexao);
 
                 DataTable dt = new DataTable();
 
@@ -685,7 +726,6 @@ namespace ProjetoLogistica
 
         private void btn_editarVeiculo_Click(object sender, EventArgs e)
         {
-            CarregarVeiculos();
 
             if (idVeiculoSelecionado == 0)
             {
@@ -854,7 +894,6 @@ namespace ProjetoLogistica
 
         private void btn_editarMotorista_Click(object sender, EventArgs e)
         {
-            CarregarMotoristas();
 
             if (idMotoristaSelecionado == 0)
             {
@@ -1045,7 +1084,6 @@ namespace ProjetoLogistica
 
         private void btn_editarRota_Click(object sender, EventArgs e)
         {
-            CarregarRota();
 
             if (idRotaSelecionada == 0)
             {
@@ -1237,7 +1275,6 @@ namespace ProjetoLogistica
 
         private void btn_editarPreco_Click(object sender, EventArgs e)
         {
-            CarregarCombustivel();
 
             if (idPrecoSelecionado == 0)
             {
@@ -1354,71 +1391,107 @@ namespace ProjetoLogistica
             CarregarComboBoxVeiculos();
             CarregarComboBoxMotoristas();
             CarregarComboBoxRotas();
+            CarregarComboBoxStatus();
 
 
         }
 
         private void btn_salvarViagem_Click(object sender, EventArgs e)
         {
-            MySqlConnection conexao =
-                new MySqlConnection(Conexao.ConexaoString);
-
-            conexao.Open();
-
-            string sql = @"INSERT INTO viagem
-            (
-                veiculoID,
-                motoristaID,
-                rotaID,
-                data_saida,
-                data_chegada,
-                situacao
-            )
-            VALUES
-            (
-                @veiculo,
-                @motorista,
-                @rota,
-                @saida,
-                @chegada,
-                @situacao
-            )";
-
-            MySqlCommand comando =
-                new MySqlCommand(sql, conexao);
-
-            string situacao;
-
-            if (dateTimeChegada.Checked)
+            try
             {
-                situacao = "Concluída";
+                using (MySqlConnection conexao = new MySqlConnection(Conexao.ConexaoString))
+                {
+                    conexao.Open();
+
+                    string situacao;
+
+                    if (dateTimeChegada.Checked)
+                        situacao = "Concluída";
+                    else
+                        situacao = "Em Andamento";
+
+                    if (modoEdicao)
+                    {
+                        string sql = @"
+                            UPDATE viagem
+                            SET
+                                veiculoID = @veiculo,
+                                motoristaID = @motorista,
+                                rotaID = @rota,
+                                data_saida = @saida,
+                                data_chegada = @chegada,
+                                situacao = @situacao
+                            WHERE viagemID = @ID";
+
+                        MySqlCommand comando = new MySqlCommand(sql, conexao);
+
+                        comando.Parameters.AddWithValue("@ID", idViagemSelecionada);
+                        comando.Parameters.AddWithValue("@veiculo", cmb_Veiculo.SelectedValue);
+                        comando.Parameters.AddWithValue("@motorista", cmb_Motorista.SelectedValue);
+                        comando.Parameters.AddWithValue("@rota", cmb_Rota.SelectedValue);
+                        comando.Parameters.AddWithValue("@saida", dateTimeSaida.Value);
+                        comando.Parameters.AddWithValue("@chegada", dateTimeChegada.Value);
+                        comando.Parameters.AddWithValue("@situacao", situacao);
+
+                        comando.ExecuteNonQuery();
+
+                        MessageBox.Show("Viagem atualizada com sucesso!");
+
+                        CarregarViagens();
+
+                        SairModoEdicaoViagem();
+                    }
+                    else
+                    {
+                        string sql = @"
+                            INSERT INTO viagem
+                            (
+                                veiculoID,
+                                motoristaID,
+                                rotaID,
+                                data_saida,
+                                data_chegada,
+                                situacao
+                            )
+                            VALUES
+                            (
+                                @veiculo,
+                                @motorista,
+                                @rota,
+                                @saida,
+                                @chegada,
+                                @situacao
+                            )";
+
+                        MySqlCommand comando = new MySqlCommand(sql, conexao);
+
+                        comando.Parameters.AddWithValue("@veiculo", cmb_Veiculo.SelectedValue);
+                        comando.Parameters.AddWithValue("@motorista", cmb_Motorista.SelectedValue);
+                        comando.Parameters.AddWithValue("@rota", cmb_Rota.SelectedValue);
+                        comando.Parameters.AddWithValue("@saida", dateTimeSaida.Value);
+                        comando.Parameters.AddWithValue("@chegada", dateTimeChegada.Value);
+                        comando.Parameters.AddWithValue("@situacao", situacao);
+
+                        comando.ExecuteNonQuery();
+
+                        MessageBox.Show("Viagem cadastrada com sucesso!");
+
+                        CarregarViagens();
+                    }
+                }
             }
-            else
+            catch (Exception erro)
             {
-                situacao = "Em Andamento";
+                MessageBox.Show(erro.Message);
             }
-
-            comando.Parameters.AddWithValue("@veiculo", cmb_Veiculo.SelectedValue);
-            comando.Parameters.AddWithValue("@motorista", cmb_Motorista.SelectedValue);
-            comando.Parameters.AddWithValue("@rota", cmb_Rota.SelectedValue);
-            comando.Parameters.AddWithValue("@saida", dateTimeSaida.Value);
-            comando.Parameters.AddWithValue("@chegada", dateTimeChegada.Value);
-            comando.Parameters.AddWithValue("@situacao", situacao);
-            
-
-            comando.ExecuteNonQuery();
-
-            MessageBox.Show(
-                "Viagem cadastrada com sucesso!");
-
-            CarregarViagens();
-
-            conexao.Close();
         }
 
         private void btn_LimparViagem_Click(object sender, EventArgs e)
         {
             LimparCamposViagem();
+
+            dateTimeChegada.Checked = false;
 
             idViagemSelecionada = 0;
 
@@ -1430,7 +1503,6 @@ namespace ProjetoLogistica
 
             LiberarCamposViagem();
 
-            dateTimeSaida.Focus();
         }
 
         private void btn_buscarViagem_Click(object sender, EventArgs e)
@@ -1494,6 +1566,85 @@ namespace ProjetoLogistica
                 {
                     MessageBox.Show("Erro ao excluir: " + erro.Message);
                 }
+            }
+        }
+
+        private void btn_editarViagem_Click(object sender, EventArgs e)
+        {
+
+            if (idViagemSelecionada == 0)
+            {
+                MessageBox.Show("Selecione uma Viagem.");
+                return;
+            }
+
+            EntrarModoEdicaoViagem();
+        }
+
+        private void dataGrid_Viagem_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow linha = dataGrid_Viagem.Rows[e.RowIndex];
+
+                txt_viagemID.Text = linha.Cells["viagemID"].Value.ToString();
+                dateTimeSaida.Value = Convert.ToDateTime(linha.Cells["data_saida"].Value);
+                dateTimeChegada.Value = Convert.ToDateTime(linha.Cells["data_chegada"].Value);
+                cmb_Veiculo.SelectedValue = linha.Cells["veiculoID"].Value;
+                cmb_Rota.SelectedValue = linha.Cells["rotaID"].Value;
+                cmb_Motorista.SelectedValue = linha.Cells["motoristaID"].Value;
+
+
+                idViagemSelecionada = Convert.ToInt32(
+                    linha.Cells["viagemID"].Value);
+            }
+        }
+
+        private void btn_Filtros_Click(object sender, EventArgs e)
+        {
+            using (MySqlConnection conexao = new MySqlConnection(Conexao.ConexaoString))
+            {
+                string sql = @"
+                    SELECT
+                        viagem.viagemID,
+                        veiculo.modelo,
+                        veiculo.placa,
+                        motorista.nome,
+                        rota.origem,
+                        rota.destino,
+                        viagem.data_saida,
+                        viagem.data_chegada,
+                        viagem.situacao,
+                        viagem.veiculoID,
+                        viagem.motoristaID,
+                        viagem.rotaID
+                    FROM viagem
+                    INNER JOIN veiculo ON viagem.veiculoID = veiculo.veiculoID
+                    INNER JOIN motorista ON viagem.motoristaID = motorista.motoristaID
+                    INNER JOIN rota ON viagem.rotaID = rota.rotaID";
+
+
+                if (cmb_Status.Text != "Todos")
+                {
+                    sql += " WHERE viagem.situacao = @situacao";
+                }
+
+                MySqlCommand comando = new MySqlCommand(sql, conexao);
+
+                if (cmb_Status.Text != "Todos")
+                {
+                    comando.Parameters.AddWithValue(
+                        "@situacao",
+                        cmb_Status.Text);
+                }
+
+                MySqlDataAdapter da = new MySqlDataAdapter(comando);
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                dataGrid_Viagem.DataSource = dt;
             }
         }
     }
