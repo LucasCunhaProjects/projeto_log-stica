@@ -118,3 +118,5 @@ C:\Users\lucas.cpsilva\Desktop\projeto_log-stica\ProjetoLogistica\ProjetoLogisti
 C:\Users\lucas.cpsilva\Desktop\projeto_log-stica\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoL.9C62737C.Up2Date
 C:\Users\lucas.cpsilva\Desktop\projeto_log-stica\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.exe
 C:\Users\lucas.cpsilva\Desktop\projeto_log-stica\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.pdb
+C:\Users\lucas.cpsilva\Desktop\projeto_log-stica\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.Form2.resources
+C:\Users\lucas.cpsilva\Desktop\projeto_log-stica\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.Form3.resources
