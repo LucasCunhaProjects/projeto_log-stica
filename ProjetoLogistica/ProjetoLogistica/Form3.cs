@@ -54,5 +54,37 @@ namespace ProjetoLogistica
         {
             this.Close();
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(248, 250, 252);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+
+            lbl_Titulo.Text = "Cadastro de Usuário";
+            lbl_Titulo.Font = new Font("Segoe UI", 18, FontStyle.Bold);
+            lbl_Titulo.ForeColor = Color.FromArgb(30, 58, 138);
+            lbl_Titulo.Left = (this.ClientSize.Width - lbl_Titulo.Width) / 2;
+
+            lbl_Nome.Font = new Font("Segoe UI", 10);
+            lbl_Email.Font = new Font("Segoe UI", 10);
+            lbl_Senha.Font = new Font("Segoe UI", 10);
+
+            lbl_Nome.ForeColor = Color.FromArgb(31, 41, 55);
+            lbl_Email.ForeColor = Color.FromArgb(31, 41, 55);
+            lbl_Senha.ForeColor = Color.FromArgb(31, 41, 55);
+
+            btn_Cadastrar.BackColor = Color.FromArgb(37, 99, 235);
+            btn_Cadastrar.ForeColor = Color.White;
+            btn_Cadastrar.FlatStyle = FlatStyle.Flat;
+            btn_Cadastrar.FlatAppearance.BorderSize = 0;
+
+            btn_Voltar.BackColor = Color.FromArgb(107, 114, 128);
+            btn_Voltar.ForeColor = Color.White;
+            btn_Voltar.FlatStyle = FlatStyle.Flat;
+            btn_Voltar.FlatAppearance.BorderSize = 0;
+
+        }
     }
 }

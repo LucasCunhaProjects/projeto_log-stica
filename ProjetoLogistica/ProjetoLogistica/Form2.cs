@@ -83,6 +83,27 @@ namespace ProjetoLogistica
                 Application.Exit();
             }
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(248, 250, 252);
+
+            btn_Entrar.BackColor = Color.FromArgb(37, 99, 235);
+            btn_Entrar.ForeColor = Color.White;
+            btn_Entrar.FlatStyle = FlatStyle.Flat;
+            btn_Entrar.FlatAppearance.BorderSize = 0;
+
+            btn_Cadastrar.BackColor = Color.White;
+            btn_Cadastrar.ForeColor = Color.FromArgb(37, 99, 235);
+            btn_Cadastrar.FlatStyle = FlatStyle.Flat;
+
+            btn_Encerrar.BackColor = Color.FromArgb(107, 114, 128);
+            btn_Encerrar.ForeColor = Color.White;
+            btn_Encerrar.FlatStyle = FlatStyle.Flat;
+
+            lbl_Email.ForeColor = Color.FromArgb(31, 41, 55);
+            lbl_Senha.ForeColor = Color.FromArgb(31, 41, 55);
+        }
     }
     
 }

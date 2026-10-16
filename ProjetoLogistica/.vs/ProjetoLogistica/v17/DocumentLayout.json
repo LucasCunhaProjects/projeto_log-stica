@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|c:\\users\\lcp16\\onedrive\\\u00E1rea de trabalho\\senac\\projeto_log-stica\\projetologistica\\projetologistica\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|solutionrelative:projetologistica\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\projetologistica\\local.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|solutionrelative:projetologistica\\local.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\projetologistica\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|solutionrelative:projetologistica\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\projetologistica\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -23,16 +19,20 @@
       "RelativeMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|solutionrelative:projetologistica\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\projetologistica\\conexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|solutionrelative:projetologistica\\conexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|c:\\users\\lcp16\\onedrive\\\u00E1rea de trabalho\\senac\\projeto_log-stica\\projetologistica\\projetologistica\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|solutionrelative:projetologistica\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\projetologistica\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|solutionrelative:projetologistica\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\projetologistica\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|solutionrelative:projetologistica\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\projetologistica\\conexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|solutionrelative:projetologistica\\conexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\projetologistica\\local.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DFF7CDF-7F15-4D42-8A6C-84FE247DE372}|ProjetoLogistica\\ProjetoLogistica.csproj|solutionrelative:projetologistica\\local.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,11 +42,38 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\ProjetoLogistica\\Form2.cs",
+              "RelativeDocumentMoniker": "ProjetoLogistica\\Form2.cs",
+              "ToolTip": "C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\ProjetoLogistica\\Form2.cs",
+              "RelativeToolTip": "ProjetoLogistica\\Form2.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAqwGAAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T22:46:37.364Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form3.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\ProjetoLogistica\\Form3.cs",
+              "RelativeDocumentMoniker": "ProjetoLogistica\\Form3.cs",
+              "ToolTip": "C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\ProjetoLogistica\\Form3.cs [Design]",
+              "RelativeToolTip": "ProjetoLogistica\\Form3.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T22:51:05.047Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Local.cs",
               "DocumentMoniker": "C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\ProjetoLogistica\\Local.cs",
               "RelativeDocumentMoniker": "ProjetoLogistica\\Local.cs",
@@ -58,66 +85,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "Form3.cs",
               "DocumentMoniker": "C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\ProjetoLogistica\\Form3.cs",
               "RelativeDocumentMoniker": "ProjetoLogistica\\Form3.cs",
               "ToolTip": "C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\ProjetoLogistica\\Form3.cs",
               "RelativeToolTip": "ProjetoLogistica\\Form3.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAqwDYAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAiwEMAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T22:58:20.821Z"
+              "WhenOpened": "2026-10-14T22:58:20.821Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Form3.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\ProjetoLogistica\\Form3.cs",
-              "RelativeDocumentMoniker": "ProjetoLogistica\\Form3.cs",
-              "ToolTip": "C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\ProjetoLogistica\\Form3.cs [Design]",
-              "RelativeToolTip": "ProjetoLogistica\\Form3.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T22:51:05.047Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Form2.cs",
-              "DocumentMoniker": "C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\ProjetoLogistica\\Form2.cs",
-              "RelativeDocumentMoniker": "ProjetoLogistica\\Form2.cs",
-              "ToolTip": "C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\ProjetoLogistica\\Form2.cs",
-              "RelativeToolTip": "ProjetoLogistica\\Form2.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAUwFEAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T22:46:37.364Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Form2.cs [Design]",
               "DocumentMoniker": "C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\ProjetoLogistica\\Form2.cs",
               "RelativeDocumentMoniker": "ProjetoLogistica\\Form2.cs",
               "ToolTip": "C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\ProjetoLogistica\\Form2.cs [Design]",
               "RelativeToolTip": "ProjetoLogistica\\Form2.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T22:34:15.452Z"
+              "WhenOpened": "2026-10-14T22:34:15.452Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\ProjetoLogistica\\Form1.cs",
               "RelativeDocumentMoniker": "ProjetoLogistica\\Form1.cs",
               "ToolTip": "C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\ProjetoLogistica\\Form1.cs",
               "RelativeToolTip": "ProjetoLogistica\\Form1.cs",
-              "ViewState": "AgIAAK0GAAAAAAAAAAAAAL8GAABXAAAAAAAAAA==",
+              "ViewState": "AgIAAC8HAAAAAAAAAAAiwFcHAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-01T23:19:45.271Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "conexao.cs",
               "DocumentMoniker": "C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\ProjetoLogistica\\conexao.cs",
               "RelativeDocumentMoniker": "ProjetoLogistica\\conexao.cs",
@@ -125,18 +131,20 @@
               "RelativeToolTip": "ProjetoLogistica\\conexao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-01T23:06:35.874Z"
+              "WhenOpened": "2026-10-01T23:06:35.874Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\ProjetoLogistica\\Form1.cs",
               "RelativeDocumentMoniker": "ProjetoLogistica\\Form1.cs",
               "ToolTip": "C:\\Users\\lcp16\\OneDrive\\\u00C1rea de Trabalho\\SENAC\\projeto_log-stica\\ProjetoLogistica\\ProjetoLogistica\\Form1.cs [Design]",
               "RelativeToolTip": "ProjetoLogistica\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-30T13:44:56.311Z"
+              "WhenOpened": "2026-09-30T13:44:56.311Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

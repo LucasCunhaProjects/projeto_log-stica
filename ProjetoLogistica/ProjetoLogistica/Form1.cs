@@ -1401,6 +1401,156 @@ namespace ProjetoLogistica
             CarregarComboBoxRotas();
             CarregarComboBoxStatus();
 
+            this.BackColor = Color.FromArgb(248, 250, 252);
+            tabControl1.Font = new Font("Segoe UI", 10);
+
+            dataGrid_Veiculo.BackgroundColor = Color.White;
+            dataGrid_Veiculo.BorderStyle = BorderStyle.None;
+
+            dataGrid_Veiculo.ColumnHeadersDefaultCellStyle.BackColor =
+                Color.FromArgb(37, 99, 235);
+
+            dataGrid_Veiculo.ColumnHeadersDefaultCellStyle.ForeColor =
+                Color.White;
+
+            dataGrid_Veiculo.EnableHeadersVisualStyles = false;
+
+            btn_salvarVeiculo.BackColor = Color.FromArgb(37, 99, 235);
+            btn_salvarVeiculo.ForeColor = Color.White;
+
+            btn_editarVeiculo.BackColor = Color.FromArgb(16, 185, 129);
+            btn_editarVeiculo.ForeColor = Color.White;
+
+            btn_buscarVeiculo.BackColor = Color.FromArgb(245, 158, 11);
+            btn_buscarVeiculo.ForeColor = Color.White;
+
+            btn_excluirVeiculo.BackColor = Color.FromArgb(239, 68, 68);
+            btn_excluirVeiculo.ForeColor = Color.White;
+
+            btn_LimparVeiculo.BackColor = Color.FromArgb(107, 114, 128);
+            btn_LimparVeiculo.ForeColor = Color.White;
+
+            txt_VeiculoID.BackColor = Color.Gainsboro;
+
+
+            dataGrid_Motorista.BackgroundColor = Color.White;
+            dataGrid_Motorista.BorderStyle = BorderStyle.None;
+
+            dataGrid_Motorista.ColumnHeadersDefaultCellStyle.BackColor =
+                Color.FromArgb(37, 99, 235);
+
+            dataGrid_Motorista.ColumnHeadersDefaultCellStyle.ForeColor =
+                Color.White;
+
+            dataGrid_Motorista.EnableHeadersVisualStyles = false;
+
+            btn_salvarMotorista.BackColor = Color.FromArgb(37, 99, 235);
+            btn_salvarMotorista.ForeColor = Color.White;
+
+            btn_editarMotorista.BackColor = Color.FromArgb(16, 185, 129);
+            btn_editarMotorista.ForeColor = Color.White;
+
+            btn_buscarMotorista.BackColor = Color.FromArgb(245, 158, 11);
+            btn_buscarMotorista.ForeColor = Color.White;
+
+            btn_excluirMotorista.BackColor = Color.FromArgb(239, 68, 68);
+            btn_excluirMotorista.ForeColor = Color.White;
+
+            btn_LimparMotorista.BackColor = Color.FromArgb(107, 114, 128);
+            btn_LimparMotorista.ForeColor = Color.White;
+
+            txt_MotoristaID.BackColor = Color.Gainsboro;
+
+
+            dataGrid_Rota.BackgroundColor = Color.White;
+            dataGrid_Rota.BorderStyle = BorderStyle.None;
+
+            dataGrid_Rota.ColumnHeadersDefaultCellStyle.BackColor =
+                Color.FromArgb(37, 99, 235);
+
+            dataGrid_Rota.ColumnHeadersDefaultCellStyle.ForeColor =
+                Color.White;
+
+            dataGrid_Rota.EnableHeadersVisualStyles = false;
+
+            btn_salvarRota.BackColor = Color.FromArgb(37, 99, 235);
+            btn_salvarRota.ForeColor = Color.White;
+
+            btn_editarRota.BackColor = Color.FromArgb(16, 185, 129);
+            btn_editarRota.ForeColor = Color.White;
+
+            btn_buscarRota.BackColor = Color.FromArgb(245, 158, 11);
+            btn_buscarRota.ForeColor = Color.White;
+
+            btn_excluirRota.BackColor = Color.FromArgb(239, 68, 68);
+            btn_excluirRota.ForeColor = Color.White;
+
+            btn_LimparRota.BackColor = Color.FromArgb(107, 114, 128);
+            btn_LimparRota.ForeColor = Color.White;
+
+            txt_rotaID.BackColor = Color.Gainsboro;
+
+
+            dataGrid_Combustivel.BackgroundColor = Color.White;
+            dataGrid_Combustivel.BorderStyle = BorderStyle.None;
+
+            dataGrid_Combustivel.ColumnHeadersDefaultCellStyle.BackColor =
+                Color.FromArgb(37, 99, 235);
+
+            dataGrid_Combustivel.ColumnHeadersDefaultCellStyle.ForeColor =
+                Color.White;
+
+            dataGrid_Combustivel.EnableHeadersVisualStyles = false;
+
+            btn_salvarPreco.BackColor = Color.FromArgb(37, 99, 235);
+            btn_salvarPreco.ForeColor = Color.White;
+
+            btn_editarPreco.BackColor = Color.FromArgb(16, 185, 129);
+            btn_editarPreco.ForeColor = Color.White;
+
+            btn_buscarPreco.BackColor = Color.FromArgb(245, 158, 11);
+            btn_buscarPreco.ForeColor = Color.White;
+
+            btn_excluirPreco.BackColor = Color.FromArgb(239, 68, 68);
+            btn_excluirPreco.ForeColor = Color.White;
+
+            btn_LimparPreco.BackColor = Color.FromArgb(107, 114, 128);
+            btn_LimparPreco.ForeColor = Color.White;
+
+            txt_combustivelID.BackColor = Color.Gainsboro;
+
+
+            dataGrid_Viagem.BackgroundColor = Color.White;
+            dataGrid_Viagem.BorderStyle = BorderStyle.None;
+
+            dataGrid_Viagem.ColumnHeadersDefaultCellStyle.BackColor =
+                Color.FromArgb(37, 99, 235);
+
+            dataGrid_Viagem.ColumnHeadersDefaultCellStyle.ForeColor =
+                Color.White;
+
+            dataGrid_Viagem.EnableHeadersVisualStyles = false;
+
+            btn_salvarViagem.BackColor = Color.FromArgb(37, 99, 235);
+            btn_salvarViagem.ForeColor = Color.White;
+
+            btn_editarViagem.BackColor = Color.FromArgb(16, 185, 129);
+            btn_editarViagem.ForeColor = Color.White;
+
+            btn_buscarViagem.BackColor = Color.FromArgb(245, 158, 11);
+            btn_buscarViagem.ForeColor = Color.White;
+
+            btn_excluirViagem.BackColor = Color.FromArgb(239, 68, 68);
+            btn_excluirViagem.ForeColor = Color.White;
+
+            btn_LimparViagem.BackColor = Color.FromArgb(107, 114, 128);
+            btn_LimparViagem.ForeColor = Color.White;
+
+            txt_viagemID.BackColor = Color.Gainsboro;
+
+            btn_Logoff.BackColor = Color.FromArgb(220, 38, 38);
+            btn_Logoff.ForeColor = Color.White;
+            btn_Logoff.FlatStyle = FlatStyle.Flat;
 
         }
 
