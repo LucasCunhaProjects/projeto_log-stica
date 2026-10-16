@@ -1,19 +1,26 @@
 ﻿using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace ProjetoLogistica
 {
 
     public partial class Form1 : Form
     {
+        private const string CHAVE_API = "eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6IjgwNGY5NjFlMGYwZjQwYmNhZGQwYjlkZDQzNzdiNWNkIiwiaCI6Im11cm11cjY0In0=";
+
+
         private bool modoEdicao = false;
         private int idVeiculoSelecionado = 0;
         private int idMotoristaSelecionado = 0;
@@ -596,6 +603,7 @@ namespace ProjetoLogistica
                     motorista.nome,
                     rota.origem,
                     rota.destino,
+                    rota.distancia,
                     viagem.data_saida,
                     viagem.data_chegada,
                     viagem.situacao,
@@ -1612,6 +1620,7 @@ namespace ProjetoLogistica
                         motorista.nome,
                         rota.origem,
                         rota.destino,
+                        rota.distancia,
                         viagem.data_saida,
                         viagem.data_chegada,
                         viagem.situacao,
@@ -1646,6 +1655,77 @@ namespace ProjetoLogistica
 
                 dataGrid_Viagem.DataSource = dt;
             }
+        }
+
+
+        private void btn_Logoff_Click(object sender, EventArgs e)
+        {
+            Form2 logoff = new Form2();
+            logoff.Show();
+
+            this.Close();
+        }
+
+        private async void btn_Calcular_Click(object sender, EventArgs e)
+        {
+            string origem = txt_origemRota.Text;
+
+            string urlOrigem = "https://api.heigit.org/pelias/v1/search?text=" + origem;
+
+            HttpClient clienteOrigem = new HttpClient();
+
+            clienteOrigem.DefaultRequestHeaders.Authorization =
+                new AuthenticationHeaderValue("Bearer", CHAVE_API);
+
+            string jsonOrigem = await clienteOrigem.GetStringAsync(urlOrigem);
+
+            Local localOrigem = JsonConvert.DeserializeObject<Local>(jsonOrigem);
+
+            string destino = txt_destinoRota.Text;
+
+            string urlDestino = "https://api.heigit.org/pelias/v1/search?text=" + destino;
+
+            HttpClient clienteDestino = new HttpClient();
+
+            clienteDestino.DefaultRequestHeaders.Authorization =
+                new AuthenticationHeaderValue("Bearer", CHAVE_API);
+
+            string jsonDestino = await clienteDestino.GetStringAsync(urlDestino);
+
+            Local localDestino = JsonConvert.DeserializeObject<Local>(jsonDestino);
+
+            double lonOrigem = localOrigem.Features[0].Geometry.Coordinates[0];
+            double latOrigem = localOrigem.Features[0].Geometry.Coordinates[1];
+
+            double lonDestino = localDestino.Features[0].Geometry.Coordinates[0];
+            double latDestino = localDestino.Features[0].Geometry.Coordinates[1];
+
+            string corpo =
+                "{\"coordinates\":[[" +
+                    lonOrigem.ToString(System.Globalization.CultureInfo.InvariantCulture) + "," +
+                    latOrigem.ToString(System.Globalization.CultureInfo.InvariantCulture) +
+                "],[" +
+                    lonDestino.ToString(System.Globalization.CultureInfo.InvariantCulture) + "," +
+                    latDestino.ToString(System.Globalization.CultureInfo.InvariantCulture) +
+                "]]}";
+
+            string urlRota = "https://api.heigit.org/openrouteservice/v2/directions/driving-car/json";
+
+            HttpClient clienteRota = new HttpClient();
+
+            clienteRota.DefaultRequestHeaders.Authorization =
+                new AuthenticationHeaderValue("Bearer", CHAVE_API);
+
+            StringContent conteudo = new StringContent(corpo, Encoding.UTF8, "application/json");
+
+            string jsonRota = await clienteRota.PostAsync(urlRota, conteudo)
+                .Result.Content.ReadAsStringAsync();
+
+            Rota rota = JsonConvert.DeserializeObject<Rota>(jsonRota);
+
+            double km = rota.Routes[0].Summary.Distance / 1000.0;
+
+            txt_distanciaRota.Text = km.ToString("0.00", CultureInfo.InvariantCulture);
         }
     }
 }

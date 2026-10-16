@@ -116,6 +116,8 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.btn_Logoff = new System.Windows.Forms.Button();
+            this.btn_Calcular = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Veiculo)).BeginInit();
@@ -489,6 +491,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.btn_Calcular);
             this.tabPage3.Controls.Add(this.dataGrid_Rota);
             this.tabPage3.Controls.Add(this.btn_LimparRota);
             this.tabPage3.Controls.Add(this.btn_excluirRota);
@@ -583,7 +586,7 @@
             // 
             this.txt_distanciaRota.Location = new System.Drawing.Point(80, 195);
             this.txt_distanciaRota.Name = "txt_distanciaRota";
-            this.txt_distanciaRota.Size = new System.Drawing.Size(246, 20);
+            this.txt_distanciaRota.Size = new System.Drawing.Size(165, 20);
             this.txt_distanciaRota.TabIndex = 7;
             // 
             // txt_destinoRota
@@ -1084,11 +1087,32 @@
             this.label18.TabIndex = 0;
             this.label18.Text = "Viagem ID:";
             // 
+            // btn_Logoff
+            // 
+            this.btn_Logoff.Location = new System.Drawing.Point(709, 440);
+            this.btn_Logoff.Name = "btn_Logoff";
+            this.btn_Logoff.Size = new System.Drawing.Size(75, 23);
+            this.btn_Logoff.TabIndex = 1;
+            this.btn_Logoff.Text = "Logoff";
+            this.btn_Logoff.UseVisualStyleBackColor = true;
+            this.btn_Logoff.Click += new System.EventHandler(this.btn_Logoff_Click);
+            // 
+            // btn_Calcular
+            // 
+            this.btn_Calcular.Location = new System.Drawing.Point(251, 192);
+            this.btn_Calcular.Name = "btn_Calcular";
+            this.btn_Calcular.Size = new System.Drawing.Size(75, 23);
+            this.btn_Calcular.TabIndex = 14;
+            this.btn_Calcular.Text = "Calcular";
+            this.btn_Calcular.UseVisualStyleBackColor = true;
+            this.btn_Calcular.Click += new System.EventHandler(this.btn_Calcular_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 469);
+            this.Controls.Add(this.btn_Logoff);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1206,6 +1230,8 @@
         private System.Windows.Forms.ComboBox cmb_Motorista;
         private System.Windows.Forms.ComboBox cmb_Rota;
         private System.Windows.Forms.ComboBox cmb_Veiculo;
+        private System.Windows.Forms.Button btn_Logoff;
+        private System.Windows.Forms.Button btn_Calcular;
     }
 }
 
