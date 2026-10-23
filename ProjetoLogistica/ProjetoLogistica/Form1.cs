@@ -628,6 +628,15 @@ namespace ProjetoLogistica
 
         private void btn_salvarVeiculo_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txt_Placa.Text) ||
+                string.IsNullOrWhiteSpace(txt_Modelo.Text) ||
+                string.IsNullOrWhiteSpace(txt_Carga.Text) ||
+                string.IsNullOrWhiteSpace(txt_Consumo.Text))
+            {
+                MessageBox.Show("Preencha todos os campos.");
+                return;
+            }
+
             try
             {
                 using (MySqlConnection banco = new MySqlConnection(Conexao.ConexaoString))
@@ -822,6 +831,14 @@ namespace ProjetoLogistica
 
         private void btn_salvarMotorista_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txt_NomeMotorista.Text) ||
+                string.IsNullOrWhiteSpace(txt_cnh.Text) ||
+                string.IsNullOrWhiteSpace(txt_Telefone.Text))
+            {
+                MessageBox.Show("Preencha todos os campos.");
+                return;
+            }
+
             try
             {
                 using (MySqlConnection banco = new MySqlConnection(Conexao.ConexaoString))
@@ -1012,6 +1029,14 @@ namespace ProjetoLogistica
 
         private void btn_salvarRota_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txt_origemRota.Text) ||
+               string.IsNullOrWhiteSpace(txt_destinoRota.Text) ||
+               string.IsNullOrWhiteSpace(txt_distanciaRota.Text))
+            {
+                MessageBox.Show("Preencha todos os campos.");
+                return;
+            }
+
             try
             {
                 using (MySqlConnection banco = new MySqlConnection(Conexao.ConexaoString))
@@ -1203,6 +1228,14 @@ namespace ProjetoLogistica
 
         private void btn_salvarPreco_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(cmb_combustivel.Text) ||
+               string.IsNullOrWhiteSpace(txt_precoCombustivel.Text) ||
+               string.IsNullOrWhiteSpace(dateTimeCombustivel.Text))
+            {
+                MessageBox.Show("Preencha todos os campos.");
+                return;
+            }
+
             try
             {
                 using (MySqlConnection banco = new MySqlConnection(Conexao.ConexaoString))
@@ -1552,10 +1585,36 @@ namespace ProjetoLogistica
             btn_Logoff.ForeColor = Color.White;
             btn_Logoff.FlatStyle = FlatStyle.Flat;
 
+
+            lbl_cadastroVeiculos.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            lbl_cadastroVeiculos.ForeColor = Color.FromArgb(30, 58, 138);
+
+            lbl_cadastroMotoristas.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            lbl_cadastroMotoristas.ForeColor = Color.FromArgb(30, 58, 138);
+
+            lbl_cadastroRotas.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            lbl_cadastroRotas.ForeColor = Color.FromArgb(30, 58, 138);
+
+            lbl_cadastroCombustiveis.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            lbl_cadastroCombustiveis.ForeColor = Color.FromArgb(30, 58, 138);
+
+            lbl_cadastroViagens.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            lbl_cadastroViagens.ForeColor = Color.FromArgb(30, 58, 138);
+
         }
 
         private void btn_salvarViagem_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(cmb_Veiculo.Text) ||
+               string.IsNullOrWhiteSpace(cmb_Motorista.Text) ||
+               string.IsNullOrWhiteSpace(cmb_Rota.Text) ||
+               string.IsNullOrWhiteSpace(dateTimeSaida.Text) ||
+               string.IsNullOrWhiteSpace(dateTimeChegada.Text))
+            {
+                MessageBox.Show("Preencha todos os campos.");
+                return;
+            }
+
             try
             {
                 using (MySqlConnection conexao = new MySqlConnection(Conexao.ConexaoString))

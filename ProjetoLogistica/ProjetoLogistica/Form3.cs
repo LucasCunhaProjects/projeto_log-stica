@@ -20,6 +20,19 @@ namespace ProjetoLogistica
 
         private void btn_Cadastrar_Click(object sender, EventArgs e)
         {
+
+            if (txt_Senha.Text.Length < 6)
+            {
+                MessageBox.Show(
+                    "A senha deve conter no mínimo 6 caracteres.",
+                    "Senha inválida",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+
+                txt_Senha.Focus();
+                return;
+            }
+
             try
             {
                 using (MySqlConnection conexao = new MySqlConnection(Conexao.ConexaoString))

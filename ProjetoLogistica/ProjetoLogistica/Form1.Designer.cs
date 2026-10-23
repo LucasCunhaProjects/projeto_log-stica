@@ -30,12 +30,14 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btn_LimparVeiculo = new System.Windows.Forms.Button();
-            this.dataGrid_Veiculo = new System.Windows.Forms.DataGridView();
-            this.btn_excluirVeiculo = new System.Windows.Forms.Button();
-            this.btn_buscarVeiculo = new System.Windows.Forms.Button();
-            this.btn_editarVeiculo = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_salvarVeiculo = new System.Windows.Forms.Button();
+            this.btn_editarVeiculo = new System.Windows.Forms.Button();
+            this.btn_excluirVeiculo = new System.Windows.Forms.Button();
+            this.btn_LimparVeiculo = new System.Windows.Forms.Button();
+            this.btn_buscarVeiculo = new System.Windows.Forms.Button();
+            this.lbl_cadastroVeiculos = new System.Windows.Forms.Label();
+            this.dataGrid_Veiculo = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,9 +49,14 @@
             this.txt_Modelo = new System.Windows.Forms.TextBox();
             this.txt_VeiculoID = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGrid_Motorista = new System.Windows.Forms.DataGridView();
-            this.btn_LimparMotorista = new System.Windows.Forms.Button();
+            this.lbl_cadastroMotoristas = new System.Windows.Forms.Label();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.btn_salvarMotorista = new System.Windows.Forms.Button();
+            this.btn_editarMotorista = new System.Windows.Forms.Button();
+            this.btn_excluirMotorista = new System.Windows.Forms.Button();
+            this.btn_LimparMotorista = new System.Windows.Forms.Button();
+            this.btn_buscarMotorista = new System.Windows.Forms.Button();
+            this.dataGrid_Motorista = new System.Windows.Forms.DataGridView();
             this.txt_Telefone = new System.Windows.Forms.TextBox();
             this.txt_cnh = new System.Windows.Forms.TextBox();
             this.txt_NomeMotorista = new System.Windows.Forms.TextBox();
@@ -58,17 +65,16 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btn_excluirMotorista = new System.Windows.Forms.Button();
-            this.btn_buscarMotorista = new System.Windows.Forms.Button();
-            this.btn_editarMotorista = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btn_salvarRota = new System.Windows.Forms.Button();
+            this.btn_editarRota = new System.Windows.Forms.Button();
+            this.btn_excluirRota = new System.Windows.Forms.Button();
+            this.btn_LimparRota = new System.Windows.Forms.Button();
+            this.btn_buscarRota = new System.Windows.Forms.Button();
+            this.lbl_cadastroRotas = new System.Windows.Forms.Label();
             this.btn_Calcular = new System.Windows.Forms.Button();
             this.dataGrid_Rota = new System.Windows.Forms.DataGridView();
-            this.btn_LimparRota = new System.Windows.Forms.Button();
-            this.btn_excluirRota = new System.Windows.Forms.Button();
-            this.btn_buscarRota = new System.Windows.Forms.Button();
-            this.btn_editarRota = new System.Windows.Forms.Button();
-            this.btn_salvarRota = new System.Windows.Forms.Button();
             this.txt_distanciaRota = new System.Windows.Forms.TextBox();
             this.txt_destinoRota = new System.Windows.Forms.TextBox();
             this.txt_origemRota = new System.Windows.Forms.TextBox();
@@ -78,8 +84,14 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dataGrid_Combustivel = new System.Windows.Forms.DataGridView();
+            this.lbl_cadastroCombustiveis = new System.Windows.Forms.Label();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btn_salvarPreco = new System.Windows.Forms.Button();
+            this.btn_editarPreco = new System.Windows.Forms.Button();
+            this.btn_excluirPreco = new System.Windows.Forms.Button();
             this.btn_LimparPreco = new System.Windows.Forms.Button();
+            this.btn_buscarPreco = new System.Windows.Forms.Button();
+            this.dataGrid_Combustivel = new System.Windows.Forms.DataGridView();
             this.dateTimeCombustivel = new System.Windows.Forms.DateTimePicker();
             this.cmb_combustivel = new System.Windows.Forms.ComboBox();
             this.txt_precoCombustivel = new System.Windows.Forms.TextBox();
@@ -88,11 +100,14 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.btn_excluirPreco = new System.Windows.Forms.Button();
-            this.btn_buscarPreco = new System.Windows.Forms.Button();
-            this.btn_editarPreco = new System.Windows.Forms.Button();
-            this.btn_salvarPreco = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.lbl_cadastroViagens = new System.Windows.Forms.Label();
+            this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btn_salvarViagem = new System.Windows.Forms.Button();
+            this.btn_editarViagem = new System.Windows.Forms.Button();
+            this.btn_excluirViagem = new System.Windows.Forms.Button();
+            this.btn_LimparViagem = new System.Windows.Forms.Button();
+            this.btn_buscarViagem = new System.Windows.Forms.Button();
             this.cmb_Motorista = new System.Windows.Forms.ComboBox();
             this.cmb_Rota = new System.Windows.Forms.ComboBox();
             this.cmb_Veiculo = new System.Windows.Forms.ComboBox();
@@ -101,13 +116,7 @@
             this.cmb_Status = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.btn_Detalhes = new System.Windows.Forms.Button();
             this.dataGrid_Viagem = new System.Windows.Forms.DataGridView();
-            this.btn_LimparViagem = new System.Windows.Forms.Button();
-            this.btn_excluirViagem = new System.Windows.Forms.Button();
-            this.btn_buscarViagem = new System.Windows.Forms.Button();
-            this.btn_editarViagem = new System.Windows.Forms.Button();
-            this.btn_salvarViagem = new System.Windows.Forms.Button();
             this.txt_viagemID = new System.Windows.Forms.TextBox();
             this.dateTimeChegada = new System.Windows.Forms.DateTimePicker();
             this.dateTimeSaida = new System.Windows.Forms.DateTimePicker();
@@ -120,14 +129,19 @@
             this.btn_Logoff = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Veiculo)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Motorista)).BeginInit();
             this.tabPage3.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Rota)).BeginInit();
             this.tabPage4.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Combustivel)).BeginInit();
             this.tabPage5.SuspendLayout();
+            this.flowLayoutPanel5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Viagem)).BeginInit();
             this.SuspendLayout();
@@ -139,20 +153,17 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(0, 43);
+            this.tabControl1.Location = new System.Drawing.Point(2, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(788, 575);
+            this.tabControl1.Size = new System.Drawing.Size(527, 607);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.btn_LimparVeiculo);
+            this.tabPage1.Controls.Add(this.flowLayoutPanel1);
+            this.tabPage1.Controls.Add(this.lbl_cadastroVeiculos);
             this.tabPage1.Controls.Add(this.dataGrid_Veiculo);
-            this.tabPage1.Controls.Add(this.btn_excluirVeiculo);
-            this.tabPage1.Controls.Add(this.btn_buscarVeiculo);
-            this.tabPage1.Controls.Add(this.btn_editarVeiculo);
-            this.tabPage1.Controls.Add(this.btn_salvarVeiculo);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label3);
@@ -164,88 +175,119 @@
             this.tabPage1.Controls.Add(this.txt_Modelo);
             this.tabPage1.Controls.Add(this.txt_VeiculoID);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(780, 549);
+            this.tabPage1.Size = new System.Drawing.Size(519, 581);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Veículo";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // btn_LimparVeiculo
+            // flowLayoutPanel1
             // 
-            this.btn_LimparVeiculo.Image = global::ProjetoLogistica.Properties.Resources.borracha;
-            this.btn_LimparVeiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_LimparVeiculo.Location = new System.Drawing.Point(6, 294);
-            this.btn_LimparVeiculo.Name = "btn_LimparVeiculo";
-            this.btn_LimparVeiculo.Size = new System.Drawing.Size(75, 23);
-            this.btn_LimparVeiculo.TabIndex = 15;
-            this.btn_LimparVeiculo.Text = "Limpar";
-            this.btn_LimparVeiculo.UseVisualStyleBackColor = true;
-            this.btn_LimparVeiculo.Click += new System.EventHandler(this.btn_LimparTelaVeiculo_Click);
-            // 
-            // dataGrid_Veiculo
-            // 
-            this.dataGrid_Veiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid_Veiculo.Location = new System.Drawing.Point(6, 323);
-            this.dataGrid_Veiculo.Name = "dataGrid_Veiculo";
-            this.dataGrid_Veiculo.Size = new System.Drawing.Size(768, 220);
-            this.dataGrid_Veiculo.TabIndex = 14;
-            this.dataGrid_Veiculo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Veiculo_CellContentClick);
-            // 
-            // btn_excluirVeiculo
-            // 
-            this.btn_excluirVeiculo.Image = global::ProjetoLogistica.Properties.Resources.excluir;
-            this.btn_excluirVeiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_excluirVeiculo.Location = new System.Drawing.Point(251, 265);
-            this.btn_excluirVeiculo.Name = "btn_excluirVeiculo";
-            this.btn_excluirVeiculo.Size = new System.Drawing.Size(75, 23);
-            this.btn_excluirVeiculo.TabIndex = 13;
-            this.btn_excluirVeiculo.Text = "Excluir";
-            this.btn_excluirVeiculo.UseVisualStyleBackColor = true;
-            this.btn_excluirVeiculo.Click += new System.EventHandler(this.btn_excluirVeiculo_Click);
-            // 
-            // btn_buscarVeiculo
-            // 
-            this.btn_buscarVeiculo.Image = global::ProjetoLogistica.Properties.Resources.consultar;
-            this.btn_buscarVeiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_buscarVeiculo.Location = new System.Drawing.Point(170, 265);
-            this.btn_buscarVeiculo.Name = "btn_buscarVeiculo";
-            this.btn_buscarVeiculo.Size = new System.Drawing.Size(75, 23);
-            this.btn_buscarVeiculo.TabIndex = 12;
-            this.btn_buscarVeiculo.Text = "  Buscar";
-            this.btn_buscarVeiculo.UseVisualStyleBackColor = true;
-            this.btn_buscarVeiculo.Click += new System.EventHandler(this.btn_buscarVeiculo_Click);
-            // 
-            // btn_editarVeiculo
-            // 
-            this.btn_editarVeiculo.Image = global::ProjetoLogistica.Properties.Resources.editar;
-            this.btn_editarVeiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_editarVeiculo.Location = new System.Drawing.Point(89, 265);
-            this.btn_editarVeiculo.Name = "btn_editarVeiculo";
-            this.btn_editarVeiculo.Size = new System.Drawing.Size(75, 23);
-            this.btn_editarVeiculo.TabIndex = 11;
-            this.btn_editarVeiculo.Text = "Editar";
-            this.btn_editarVeiculo.UseVisualStyleBackColor = true;
-            this.btn_editarVeiculo.Click += new System.EventHandler(this.btn_editarVeiculo_Click);
+            this.flowLayoutPanel1.AutoSize = true;
+            this.flowLayoutPanel1.Controls.Add(this.btn_salvarVeiculo);
+            this.flowLayoutPanel1.Controls.Add(this.btn_editarVeiculo);
+            this.flowLayoutPanel1.Controls.Add(this.btn_excluirVeiculo);
+            this.flowLayoutPanel1.Controls.Add(this.btn_LimparVeiculo);
+            this.flowLayoutPanel1.Controls.Add(this.btn_buscarVeiculo);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(6, 283);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(510, 37);
+            this.flowLayoutPanel1.TabIndex = 17;
+            this.flowLayoutPanel1.WrapContents = false;
             // 
             // btn_salvarVeiculo
             // 
             this.btn_salvarVeiculo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_salvarVeiculo.Image = global::ProjetoLogistica.Properties.Resources.salvar;
             this.btn_salvarVeiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_salvarVeiculo.Location = new System.Drawing.Point(8, 265);
+            this.btn_salvarVeiculo.Location = new System.Drawing.Point(6, 3);
+            this.btn_salvarVeiculo.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.btn_salvarVeiculo.Name = "btn_salvarVeiculo";
-            this.btn_salvarVeiculo.Size = new System.Drawing.Size(75, 23);
+            this.btn_salvarVeiculo.Size = new System.Drawing.Size(90, 30);
             this.btn_salvarVeiculo.TabIndex = 10;
             this.btn_salvarVeiculo.Text = "Salvar";
             this.btn_salvarVeiculo.UseVisualStyleBackColor = true;
             this.btn_salvarVeiculo.Click += new System.EventHandler(this.btn_salvarVeiculo_Click);
             // 
+            // btn_editarVeiculo
+            // 
+            this.btn_editarVeiculo.Image = global::ProjetoLogistica.Properties.Resources.editar;
+            this.btn_editarVeiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_editarVeiculo.Location = new System.Drawing.Point(108, 3);
+            this.btn_editarVeiculo.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_editarVeiculo.Name = "btn_editarVeiculo";
+            this.btn_editarVeiculo.Size = new System.Drawing.Size(90, 30);
+            this.btn_editarVeiculo.TabIndex = 11;
+            this.btn_editarVeiculo.Text = "Editar";
+            this.btn_editarVeiculo.UseVisualStyleBackColor = true;
+            this.btn_editarVeiculo.Click += new System.EventHandler(this.btn_editarVeiculo_Click);
+            // 
+            // btn_excluirVeiculo
+            // 
+            this.btn_excluirVeiculo.Image = global::ProjetoLogistica.Properties.Resources.excluir;
+            this.btn_excluirVeiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_excluirVeiculo.Location = new System.Drawing.Point(210, 3);
+            this.btn_excluirVeiculo.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_excluirVeiculo.Name = "btn_excluirVeiculo";
+            this.btn_excluirVeiculo.Size = new System.Drawing.Size(90, 30);
+            this.btn_excluirVeiculo.TabIndex = 13;
+            this.btn_excluirVeiculo.Text = "Excluir";
+            this.btn_excluirVeiculo.UseVisualStyleBackColor = true;
+            this.btn_excluirVeiculo.Click += new System.EventHandler(this.btn_excluirVeiculo_Click);
+            // 
+            // btn_LimparVeiculo
+            // 
+            this.btn_LimparVeiculo.Image = global::ProjetoLogistica.Properties.Resources.borracha;
+            this.btn_LimparVeiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_LimparVeiculo.Location = new System.Drawing.Point(312, 3);
+            this.btn_LimparVeiculo.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_LimparVeiculo.Name = "btn_LimparVeiculo";
+            this.btn_LimparVeiculo.Size = new System.Drawing.Size(90, 30);
+            this.btn_LimparVeiculo.TabIndex = 15;
+            this.btn_LimparVeiculo.Text = "Limpar";
+            this.btn_LimparVeiculo.UseVisualStyleBackColor = true;
+            this.btn_LimparVeiculo.Click += new System.EventHandler(this.btn_LimparTelaVeiculo_Click);
+            // 
+            // btn_buscarVeiculo
+            // 
+            this.btn_buscarVeiculo.Image = global::ProjetoLogistica.Properties.Resources.consultar;
+            this.btn_buscarVeiculo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_buscarVeiculo.Location = new System.Drawing.Point(414, 3);
+            this.btn_buscarVeiculo.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_buscarVeiculo.Name = "btn_buscarVeiculo";
+            this.btn_buscarVeiculo.Size = new System.Drawing.Size(90, 30);
+            this.btn_buscarVeiculo.TabIndex = 12;
+            this.btn_buscarVeiculo.Text = "  Buscar";
+            this.btn_buscarVeiculo.UseVisualStyleBackColor = true;
+            this.btn_buscarVeiculo.Click += new System.EventHandler(this.btn_buscarVeiculo_Click);
+            // 
+            // lbl_cadastroVeiculos
+            // 
+            this.lbl_cadastroVeiculos.AutoSize = true;
+            this.lbl_cadastroVeiculos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cadastroVeiculos.Location = new System.Drawing.Point(8, 19);
+            this.lbl_cadastroVeiculos.Name = "lbl_cadastroVeiculos";
+            this.lbl_cadastroVeiculos.Size = new System.Drawing.Size(160, 20);
+            this.lbl_cadastroVeiculos.TabIndex = 16;
+            this.lbl_cadastroVeiculos.Text = "Cadastro de Veículos";
+            // 
+            // dataGrid_Veiculo
+            // 
+            this.dataGrid_Veiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid_Veiculo.Location = new System.Drawing.Point(8, 326);
+            this.dataGrid_Veiculo.Name = "dataGrid_Veiculo";
+            this.dataGrid_Veiculo.Size = new System.Drawing.Size(506, 249);
+            this.dataGrid_Veiculo.TabIndex = 14;
+            this.dataGrid_Veiculo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Veiculo_CellContentClick);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(8, 221);
+            this.label5.Location = new System.Drawing.Point(8, 228);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(124, 16);
             this.label5.TabIndex = 9;
@@ -255,7 +297,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(8, 171);
+            this.label4.Location = new System.Drawing.Point(8, 178);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(149, 16);
             this.label4.TabIndex = 8;
@@ -265,7 +307,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 121);
+            this.label3.Location = new System.Drawing.Point(293, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 16);
             this.label3.TabIndex = 7;
@@ -275,7 +317,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 71);
+            this.label2.Location = new System.Drawing.Point(8, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 6;
@@ -285,7 +327,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 21);
+            this.label1.Location = new System.Drawing.Point(8, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 16);
             this.label1.TabIndex = 5;
@@ -293,45 +335,45 @@
             // 
             // txt_Carga
             // 
-            this.txt_Carga.Location = new System.Drawing.Point(138, 217);
+            this.txt_Carga.Location = new System.Drawing.Point(138, 224);
             this.txt_Carga.Name = "txt_Carga";
-            this.txt_Carga.Size = new System.Drawing.Size(188, 20);
+            this.txt_Carga.Size = new System.Drawing.Size(150, 20);
             this.txt_Carga.TabIndex = 4;
             // 
             // txt_Consumo
             // 
-            this.txt_Consumo.Location = new System.Drawing.Point(163, 167);
+            this.txt_Consumo.Location = new System.Drawing.Point(163, 174);
             this.txt_Consumo.Name = "txt_Consumo";
-            this.txt_Consumo.Size = new System.Drawing.Size(163, 20);
+            this.txt_Consumo.Size = new System.Drawing.Size(125, 20);
             this.txt_Consumo.TabIndex = 3;
             // 
             // txt_Placa
             // 
-            this.txt_Placa.Location = new System.Drawing.Point(59, 117);
+            this.txt_Placa.Location = new System.Drawing.Point(344, 74);
             this.txt_Placa.Name = "txt_Placa";
-            this.txt_Placa.Size = new System.Drawing.Size(267, 20);
+            this.txt_Placa.Size = new System.Drawing.Size(137, 20);
             this.txt_Placa.TabIndex = 2;
             // 
             // txt_Modelo
             // 
-            this.txt_Modelo.Location = new System.Drawing.Point(70, 67);
+            this.txt_Modelo.Location = new System.Drawing.Point(70, 124);
             this.txt_Modelo.Name = "txt_Modelo";
-            this.txt_Modelo.Size = new System.Drawing.Size(256, 20);
+            this.txt_Modelo.Size = new System.Drawing.Size(218, 20);
             this.txt_Modelo.TabIndex = 1;
             // 
             // txt_VeiculoID
             // 
-            this.txt_VeiculoID.Location = new System.Drawing.Point(85, 17);
+            this.txt_VeiculoID.Location = new System.Drawing.Point(85, 74);
             this.txt_VeiculoID.Name = "txt_VeiculoID";
             this.txt_VeiculoID.ReadOnly = true;
-            this.txt_VeiculoID.Size = new System.Drawing.Size(241, 20);
+            this.txt_VeiculoID.Size = new System.Drawing.Size(166, 20);
             this.txt_VeiculoID.TabIndex = 0;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.lbl_cadastroMotoristas);
+            this.tabPage2.Controls.Add(this.flowLayoutPanel2);
             this.tabPage2.Controls.Add(this.dataGrid_Motorista);
-            this.tabPage2.Controls.Add(this.btn_LimparMotorista);
-            this.tabPage2.Controls.Add(this.btn_salvarMotorista);
             this.tabPage2.Controls.Add(this.txt_Telefone);
             this.tabPage2.Controls.Add(this.txt_cnh);
             this.tabPage2.Controls.Add(this.txt_NomeMotorista);
@@ -340,84 +382,145 @@
             this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.btn_excluirMotorista);
-            this.tabPage2.Controls.Add(this.btn_buscarMotorista);
-            this.tabPage2.Controls.Add(this.btn_editarMotorista);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(780, 549);
+            this.tabPage2.Size = new System.Drawing.Size(519, 581);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Motorista";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dataGrid_Motorista
+            // lbl_cadastroMotoristas
             // 
-            this.dataGrid_Motorista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid_Motorista.Location = new System.Drawing.Point(6, 271);
-            this.dataGrid_Motorista.Name = "dataGrid_Motorista";
-            this.dataGrid_Motorista.Size = new System.Drawing.Size(768, 272);
-            this.dataGrid_Motorista.TabIndex = 14;
-            this.dataGrid_Motorista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Motorista_CellContentClick);
+            this.lbl_cadastroMotoristas.AutoSize = true;
+            this.lbl_cadastroMotoristas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cadastroMotoristas.Location = new System.Drawing.Point(8, 19);
+            this.lbl_cadastroMotoristas.Name = "lbl_cadastroMotoristas";
+            this.lbl_cadastroMotoristas.Size = new System.Drawing.Size(174, 20);
+            this.lbl_cadastroMotoristas.TabIndex = 16;
+            this.lbl_cadastroMotoristas.Text = "Cadastro de Motoristas";
             // 
-            // btn_LimparMotorista
+            // flowLayoutPanel2
             // 
-            this.btn_LimparMotorista.Image = global::ProjetoLogistica.Properties.Resources.borracha;
-            this.btn_LimparMotorista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_LimparMotorista.Location = new System.Drawing.Point(11, 242);
-            this.btn_LimparMotorista.Name = "btn_LimparMotorista";
-            this.btn_LimparMotorista.Size = new System.Drawing.Size(75, 23);
-            this.btn_LimparMotorista.TabIndex = 13;
-            this.btn_LimparMotorista.Text = "Limpar";
-            this.btn_LimparMotorista.UseVisualStyleBackColor = true;
-            this.btn_LimparMotorista.Click += new System.EventHandler(this.btn_LimparMotorista_Click);
+            this.flowLayoutPanel2.Controls.Add(this.btn_salvarMotorista);
+            this.flowLayoutPanel2.Controls.Add(this.btn_editarMotorista);
+            this.flowLayoutPanel2.Controls.Add(this.btn_excluirMotorista);
+            this.flowLayoutPanel2.Controls.Add(this.btn_LimparMotorista);
+            this.flowLayoutPanel2.Controls.Add(this.btn_buscarMotorista);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(6, 283);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(520, 37);
+            this.flowLayoutPanel2.TabIndex = 15;
             // 
             // btn_salvarMotorista
             // 
             this.btn_salvarMotorista.Image = global::ProjetoLogistica.Properties.Resources.salvar;
             this.btn_salvarMotorista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_salvarMotorista.Location = new System.Drawing.Point(11, 213);
+            this.btn_salvarMotorista.Location = new System.Drawing.Point(6, 3);
+            this.btn_salvarMotorista.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.btn_salvarMotorista.Name = "btn_salvarMotorista";
-            this.btn_salvarMotorista.Size = new System.Drawing.Size(75, 23);
+            this.btn_salvarMotorista.Size = new System.Drawing.Size(90, 30);
             this.btn_salvarMotorista.TabIndex = 12;
             this.btn_salvarMotorista.Text = "Salvar";
             this.btn_salvarMotorista.UseVisualStyleBackColor = true;
             this.btn_salvarMotorista.Click += new System.EventHandler(this.btn_salvarMotorista_Click);
             // 
+            // btn_editarMotorista
+            // 
+            this.btn_editarMotorista.Image = global::ProjetoLogistica.Properties.Resources.editar;
+            this.btn_editarMotorista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_editarMotorista.Location = new System.Drawing.Point(108, 3);
+            this.btn_editarMotorista.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_editarMotorista.Name = "btn_editarMotorista";
+            this.btn_editarMotorista.Size = new System.Drawing.Size(90, 30);
+            this.btn_editarMotorista.TabIndex = 1;
+            this.btn_editarMotorista.Text = "Editar";
+            this.btn_editarMotorista.UseVisualStyleBackColor = true;
+            this.btn_editarMotorista.Click += new System.EventHandler(this.btn_editarMotorista_Click);
+            // 
+            // btn_excluirMotorista
+            // 
+            this.btn_excluirMotorista.Image = global::ProjetoLogistica.Properties.Resources.excluir;
+            this.btn_excluirMotorista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_excluirMotorista.Location = new System.Drawing.Point(210, 3);
+            this.btn_excluirMotorista.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_excluirMotorista.Name = "btn_excluirMotorista";
+            this.btn_excluirMotorista.Size = new System.Drawing.Size(90, 30);
+            this.btn_excluirMotorista.TabIndex = 3;
+            this.btn_excluirMotorista.Text = "Excluir";
+            this.btn_excluirMotorista.UseVisualStyleBackColor = true;
+            this.btn_excluirMotorista.Click += new System.EventHandler(this.btn_excluirMotorista_Click);
+            // 
+            // btn_LimparMotorista
+            // 
+            this.btn_LimparMotorista.Image = global::ProjetoLogistica.Properties.Resources.borracha;
+            this.btn_LimparMotorista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_LimparMotorista.Location = new System.Drawing.Point(312, 3);
+            this.btn_LimparMotorista.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_LimparMotorista.Name = "btn_LimparMotorista";
+            this.btn_LimparMotorista.Size = new System.Drawing.Size(90, 30);
+            this.btn_LimparMotorista.TabIndex = 13;
+            this.btn_LimparMotorista.Text = "Limpar";
+            this.btn_LimparMotorista.UseVisualStyleBackColor = true;
+            this.btn_LimparMotorista.Click += new System.EventHandler(this.btn_LimparMotorista_Click);
+            // 
+            // btn_buscarMotorista
+            // 
+            this.btn_buscarMotorista.Image = global::ProjetoLogistica.Properties.Resources.consultar;
+            this.btn_buscarMotorista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_buscarMotorista.Location = new System.Drawing.Point(414, 3);
+            this.btn_buscarMotorista.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_buscarMotorista.Name = "btn_buscarMotorista";
+            this.btn_buscarMotorista.Size = new System.Drawing.Size(90, 30);
+            this.btn_buscarMotorista.TabIndex = 2;
+            this.btn_buscarMotorista.Text = "  Buscar";
+            this.btn_buscarMotorista.UseVisualStyleBackColor = true;
+            this.btn_buscarMotorista.Click += new System.EventHandler(this.btn_buscar_Click);
+            // 
+            // dataGrid_Motorista
+            // 
+            this.dataGrid_Motorista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid_Motorista.Location = new System.Drawing.Point(6, 326);
+            this.dataGrid_Motorista.Name = "dataGrid_Motorista";
+            this.dataGrid_Motorista.Size = new System.Drawing.Size(506, 249);
+            this.dataGrid_Motorista.TabIndex = 14;
+            this.dataGrid_Motorista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Motorista_CellContentClick);
+            // 
             // txt_Telefone
             // 
-            this.txt_Telefone.Location = new System.Drawing.Point(78, 167);
+            this.txt_Telefone.Location = new System.Drawing.Point(73, 224);
             this.txt_Telefone.Name = "txt_Telefone";
             this.txt_Telefone.Size = new System.Drawing.Size(248, 20);
             this.txt_Telefone.TabIndex = 11;
             // 
             // txt_cnh
             // 
-            this.txt_cnh.Location = new System.Drawing.Point(53, 117);
+            this.txt_cnh.Location = new System.Drawing.Point(48, 174);
             this.txt_cnh.Name = "txt_cnh";
             this.txt_cnh.Size = new System.Drawing.Size(273, 20);
             this.txt_cnh.TabIndex = 10;
             // 
             // txt_NomeMotorista
             // 
-            this.txt_NomeMotorista.Location = new System.Drawing.Point(61, 67);
+            this.txt_NomeMotorista.Location = new System.Drawing.Point(56, 124);
             this.txt_NomeMotorista.Name = "txt_NomeMotorista";
             this.txt_NomeMotorista.Size = new System.Drawing.Size(265, 20);
             this.txt_NomeMotorista.TabIndex = 9;
             // 
             // txt_MotoristaID
             // 
-            this.txt_MotoristaID.Location = new System.Drawing.Point(95, 17);
+            this.txt_MotoristaID.Location = new System.Drawing.Point(92, 74);
             this.txt_MotoristaID.Name = "txt_MotoristaID";
             this.txt_MotoristaID.ReadOnly = true;
-            this.txt_MotoristaID.Size = new System.Drawing.Size(231, 20);
+            this.txt_MotoristaID.Size = new System.Drawing.Size(95, 20);
             this.txt_MotoristaID.TabIndex = 8;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(8, 171);
+            this.label9.Location = new System.Drawing.Point(8, 228);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 16);
             this.label9.TabIndex = 7;
@@ -427,7 +530,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(8, 121);
+            this.label8.Location = new System.Drawing.Point(8, 178);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(39, 16);
             this.label8.TabIndex = 6;
@@ -437,7 +540,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(8, 71);
+            this.label7.Location = new System.Drawing.Point(8, 128);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 16);
             this.label7.TabIndex = 5;
@@ -447,57 +550,18 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(8, 21);
+            this.label6.Location = new System.Drawing.Point(8, 78);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 16);
             this.label6.TabIndex = 4;
             this.label6.Text = "Motorista ID:";
             // 
-            // btn_excluirMotorista
-            // 
-            this.btn_excluirMotorista.Image = global::ProjetoLogistica.Properties.Resources.excluir;
-            this.btn_excluirMotorista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_excluirMotorista.Location = new System.Drawing.Point(254, 213);
-            this.btn_excluirMotorista.Name = "btn_excluirMotorista";
-            this.btn_excluirMotorista.Size = new System.Drawing.Size(75, 23);
-            this.btn_excluirMotorista.TabIndex = 3;
-            this.btn_excluirMotorista.Text = "Excluir";
-            this.btn_excluirMotorista.UseVisualStyleBackColor = true;
-            this.btn_excluirMotorista.Click += new System.EventHandler(this.btn_excluirMotorista_Click);
-            // 
-            // btn_buscarMotorista
-            // 
-            this.btn_buscarMotorista.Image = global::ProjetoLogistica.Properties.Resources.consultar;
-            this.btn_buscarMotorista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_buscarMotorista.Location = new System.Drawing.Point(173, 213);
-            this.btn_buscarMotorista.Name = "btn_buscarMotorista";
-            this.btn_buscarMotorista.Size = new System.Drawing.Size(75, 23);
-            this.btn_buscarMotorista.TabIndex = 2;
-            this.btn_buscarMotorista.Text = "  Buscar";
-            this.btn_buscarMotorista.UseVisualStyleBackColor = true;
-            this.btn_buscarMotorista.Click += new System.EventHandler(this.btn_buscar_Click);
-            // 
-            // btn_editarMotorista
-            // 
-            this.btn_editarMotorista.Image = global::ProjetoLogistica.Properties.Resources.editar;
-            this.btn_editarMotorista.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_editarMotorista.Location = new System.Drawing.Point(92, 213);
-            this.btn_editarMotorista.Name = "btn_editarMotorista";
-            this.btn_editarMotorista.Size = new System.Drawing.Size(75, 23);
-            this.btn_editarMotorista.TabIndex = 1;
-            this.btn_editarMotorista.Text = "Editar";
-            this.btn_editarMotorista.UseVisualStyleBackColor = true;
-            this.btn_editarMotorista.Click += new System.EventHandler(this.btn_editarMotorista_Click);
-            // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.flowLayoutPanel3);
+            this.tabPage3.Controls.Add(this.lbl_cadastroRotas);
             this.tabPage3.Controls.Add(this.btn_Calcular);
             this.tabPage3.Controls.Add(this.dataGrid_Rota);
-            this.tabPage3.Controls.Add(this.btn_LimparRota);
-            this.tabPage3.Controls.Add(this.btn_excluirRota);
-            this.tabPage3.Controls.Add(this.btn_buscarRota);
-            this.tabPage3.Controls.Add(this.btn_editarRota);
-            this.tabPage3.Controls.Add(this.btn_salvarRota);
             this.tabPage3.Controls.Add(this.txt_distanciaRota);
             this.tabPage3.Controls.Add(this.txt_destinoRota);
             this.tabPage3.Controls.Add(this.txt_origemRota);
@@ -508,14 +572,102 @@
             this.tabPage3.Controls.Add(this.label10);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(780, 549);
+            this.tabPage3.Size = new System.Drawing.Size(519, 581);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Rota";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.btn_salvarRota);
+            this.flowLayoutPanel3.Controls.Add(this.btn_editarRota);
+            this.flowLayoutPanel3.Controls.Add(this.btn_excluirRota);
+            this.flowLayoutPanel3.Controls.Add(this.btn_LimparRota);
+            this.flowLayoutPanel3.Controls.Add(this.btn_buscarRota);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(6, 283);
+            this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(512, 37);
+            this.flowLayoutPanel3.TabIndex = 16;
+            // 
+            // btn_salvarRota
+            // 
+            this.btn_salvarRota.Image = global::ProjetoLogistica.Properties.Resources.salvar;
+            this.btn_salvarRota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_salvarRota.Location = new System.Drawing.Point(6, 3);
+            this.btn_salvarRota.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_salvarRota.Name = "btn_salvarRota";
+            this.btn_salvarRota.Size = new System.Drawing.Size(90, 30);
+            this.btn_salvarRota.TabIndex = 8;
+            this.btn_salvarRota.Text = "Salvar";
+            this.btn_salvarRota.UseVisualStyleBackColor = true;
+            this.btn_salvarRota.Click += new System.EventHandler(this.btn_salvarRota_Click);
+            // 
+            // btn_editarRota
+            // 
+            this.btn_editarRota.Image = global::ProjetoLogistica.Properties.Resources.editar;
+            this.btn_editarRota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_editarRota.Location = new System.Drawing.Point(108, 3);
+            this.btn_editarRota.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_editarRota.Name = "btn_editarRota";
+            this.btn_editarRota.Size = new System.Drawing.Size(90, 30);
+            this.btn_editarRota.TabIndex = 9;
+            this.btn_editarRota.Text = "Editar";
+            this.btn_editarRota.UseVisualStyleBackColor = true;
+            this.btn_editarRota.Click += new System.EventHandler(this.btn_editarRota_Click);
+            // 
+            // btn_excluirRota
+            // 
+            this.btn_excluirRota.Image = global::ProjetoLogistica.Properties.Resources.excluir;
+            this.btn_excluirRota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_excluirRota.Location = new System.Drawing.Point(210, 3);
+            this.btn_excluirRota.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_excluirRota.Name = "btn_excluirRota";
+            this.btn_excluirRota.Size = new System.Drawing.Size(90, 30);
+            this.btn_excluirRota.TabIndex = 11;
+            this.btn_excluirRota.Text = "Excluir";
+            this.btn_excluirRota.UseVisualStyleBackColor = true;
+            this.btn_excluirRota.Click += new System.EventHandler(this.btn_excluirRota_Click);
+            // 
+            // btn_LimparRota
+            // 
+            this.btn_LimparRota.Image = global::ProjetoLogistica.Properties.Resources.borracha;
+            this.btn_LimparRota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_LimparRota.Location = new System.Drawing.Point(312, 3);
+            this.btn_LimparRota.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_LimparRota.Name = "btn_LimparRota";
+            this.btn_LimparRota.Size = new System.Drawing.Size(90, 30);
+            this.btn_LimparRota.TabIndex = 12;
+            this.btn_LimparRota.Text = "Limpar";
+            this.btn_LimparRota.UseVisualStyleBackColor = true;
+            this.btn_LimparRota.Click += new System.EventHandler(this.btn_LimparRota_Click);
+            // 
+            // btn_buscarRota
+            // 
+            this.btn_buscarRota.Image = global::ProjetoLogistica.Properties.Resources.consultar;
+            this.btn_buscarRota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_buscarRota.Location = new System.Drawing.Point(414, 3);
+            this.btn_buscarRota.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_buscarRota.Name = "btn_buscarRota";
+            this.btn_buscarRota.Size = new System.Drawing.Size(90, 30);
+            this.btn_buscarRota.TabIndex = 10;
+            this.btn_buscarRota.Text = "  Buscar";
+            this.btn_buscarRota.UseVisualStyleBackColor = true;
+            this.btn_buscarRota.Click += new System.EventHandler(this.btn_buscarRota_Click);
+            // 
+            // lbl_cadastroRotas
+            // 
+            this.lbl_cadastroRotas.AutoSize = true;
+            this.lbl_cadastroRotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cadastroRotas.Location = new System.Drawing.Point(8, 19);
+            this.lbl_cadastroRotas.Name = "lbl_cadastroRotas";
+            this.lbl_cadastroRotas.Size = new System.Drawing.Size(143, 20);
+            this.lbl_cadastroRotas.TabIndex = 15;
+            this.lbl_cadastroRotas.Text = "Cadastro de Rotas";
+            // 
             // btn_Calcular
             // 
-            this.btn_Calcular.Location = new System.Drawing.Point(251, 164);
+            this.btn_Calcular.Location = new System.Drawing.Point(252, 222);
             this.btn_Calcular.Name = "btn_Calcular";
             this.btn_Calcular.Size = new System.Drawing.Size(75, 23);
             this.btn_Calcular.TabIndex = 14;
@@ -526,96 +678,36 @@
             // dataGrid_Rota
             // 
             this.dataGrid_Rota.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid_Rota.Location = new System.Drawing.Point(3, 263);
+            this.dataGrid_Rota.Location = new System.Drawing.Point(6, 326);
             this.dataGrid_Rota.Name = "dataGrid_Rota";
-            this.dataGrid_Rota.Size = new System.Drawing.Size(774, 283);
+            this.dataGrid_Rota.Size = new System.Drawing.Size(506, 249);
             this.dataGrid_Rota.TabIndex = 13;
             this.dataGrid_Rota.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Rota_CellContentClick);
             // 
-            // btn_LimparRota
-            // 
-            this.btn_LimparRota.Image = global::ProjetoLogistica.Properties.Resources.borracha;
-            this.btn_LimparRota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_LimparRota.Location = new System.Drawing.Point(11, 234);
-            this.btn_LimparRota.Name = "btn_LimparRota";
-            this.btn_LimparRota.Size = new System.Drawing.Size(75, 23);
-            this.btn_LimparRota.TabIndex = 12;
-            this.btn_LimparRota.Text = "Limpar";
-            this.btn_LimparRota.UseVisualStyleBackColor = true;
-            this.btn_LimparRota.Click += new System.EventHandler(this.btn_LimparRota_Click);
-            // 
-            // btn_excluirRota
-            // 
-            this.btn_excluirRota.Image = global::ProjetoLogistica.Properties.Resources.excluir;
-            this.btn_excluirRota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_excluirRota.Location = new System.Drawing.Point(254, 205);
-            this.btn_excluirRota.Name = "btn_excluirRota";
-            this.btn_excluirRota.Size = new System.Drawing.Size(75, 23);
-            this.btn_excluirRota.TabIndex = 11;
-            this.btn_excluirRota.Text = "Excluir";
-            this.btn_excluirRota.UseVisualStyleBackColor = true;
-            this.btn_excluirRota.Click += new System.EventHandler(this.btn_excluirRota_Click);
-            // 
-            // btn_buscarRota
-            // 
-            this.btn_buscarRota.Image = global::ProjetoLogistica.Properties.Resources.consultar;
-            this.btn_buscarRota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_buscarRota.Location = new System.Drawing.Point(173, 205);
-            this.btn_buscarRota.Name = "btn_buscarRota";
-            this.btn_buscarRota.Size = new System.Drawing.Size(75, 23);
-            this.btn_buscarRota.TabIndex = 10;
-            this.btn_buscarRota.Text = "  Buscar";
-            this.btn_buscarRota.UseVisualStyleBackColor = true;
-            this.btn_buscarRota.Click += new System.EventHandler(this.btn_buscarRota_Click);
-            // 
-            // btn_editarRota
-            // 
-            this.btn_editarRota.Image = global::ProjetoLogistica.Properties.Resources.editar;
-            this.btn_editarRota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_editarRota.Location = new System.Drawing.Point(92, 205);
-            this.btn_editarRota.Name = "btn_editarRota";
-            this.btn_editarRota.Size = new System.Drawing.Size(75, 23);
-            this.btn_editarRota.TabIndex = 9;
-            this.btn_editarRota.Text = "Editar";
-            this.btn_editarRota.UseVisualStyleBackColor = true;
-            this.btn_editarRota.Click += new System.EventHandler(this.btn_editarRota_Click);
-            // 
-            // btn_salvarRota
-            // 
-            this.btn_salvarRota.Image = global::ProjetoLogistica.Properties.Resources.salvar;
-            this.btn_salvarRota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_salvarRota.Location = new System.Drawing.Point(11, 205);
-            this.btn_salvarRota.Name = "btn_salvarRota";
-            this.btn_salvarRota.Size = new System.Drawing.Size(75, 23);
-            this.btn_salvarRota.TabIndex = 8;
-            this.btn_salvarRota.Text = "Salvar";
-            this.btn_salvarRota.UseVisualStyleBackColor = true;
-            this.btn_salvarRota.Click += new System.EventHandler(this.btn_salvarRota_Click);
-            // 
             // txt_distanciaRota
             // 
-            this.txt_distanciaRota.Location = new System.Drawing.Point(80, 167);
+            this.txt_distanciaRota.Location = new System.Drawing.Point(80, 224);
             this.txt_distanciaRota.Name = "txt_distanciaRota";
             this.txt_distanciaRota.Size = new System.Drawing.Size(165, 20);
             this.txt_distanciaRota.TabIndex = 7;
             // 
             // txt_destinoRota
             // 
-            this.txt_destinoRota.Location = new System.Drawing.Point(70, 117);
+            this.txt_destinoRota.Location = new System.Drawing.Point(67, 174);
             this.txt_destinoRota.Name = "txt_destinoRota";
             this.txt_destinoRota.Size = new System.Drawing.Size(259, 20);
             this.txt_destinoRota.TabIndex = 6;
             // 
             // txt_origemRota
             // 
-            this.txt_origemRota.Location = new System.Drawing.Point(68, 67);
+            this.txt_origemRota.Location = new System.Drawing.Point(65, 124);
             this.txt_origemRota.Name = "txt_origemRota";
             this.txt_origemRota.Size = new System.Drawing.Size(261, 20);
             this.txt_origemRota.TabIndex = 5;
             // 
             // txt_rotaID
             // 
-            this.txt_rotaID.Location = new System.Drawing.Point(69, 17);
+            this.txt_rotaID.Location = new System.Drawing.Point(69, 74);
             this.txt_rotaID.Name = "txt_rotaID";
             this.txt_rotaID.ReadOnly = true;
             this.txt_rotaID.Size = new System.Drawing.Size(257, 20);
@@ -625,7 +717,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(8, 171);
+            this.label13.Location = new System.Drawing.Point(8, 228);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(66, 16);
             this.label13.TabIndex = 3;
@@ -635,7 +727,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(8, 121);
+            this.label12.Location = new System.Drawing.Point(8, 178);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(56, 16);
             this.label12.TabIndex = 2;
@@ -645,7 +737,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(8, 71);
+            this.label11.Location = new System.Drawing.Point(8, 128);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(54, 16);
             this.label11.TabIndex = 1;
@@ -655,7 +747,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(8, 21);
+            this.label10.Location = new System.Drawing.Point(8, 78);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 16);
             this.label10.TabIndex = 0;
@@ -663,8 +755,9 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.lbl_cadastroCombustiveis);
+            this.tabPage4.Controls.Add(this.flowLayoutPanel4);
             this.tabPage4.Controls.Add(this.dataGrid_Combustivel);
-            this.tabPage4.Controls.Add(this.btn_LimparPreco);
             this.tabPage4.Controls.Add(this.dateTimeCombustivel);
             this.tabPage4.Controls.Add(this.cmb_combustivel);
             this.tabPage4.Controls.Add(this.txt_precoCombustivel);
@@ -673,41 +766,114 @@
             this.tabPage4.Controls.Add(this.label16);
             this.tabPage4.Controls.Add(this.label15);
             this.tabPage4.Controls.Add(this.label14);
-            this.tabPage4.Controls.Add(this.btn_excluirPreco);
-            this.tabPage4.Controls.Add(this.btn_buscarPreco);
-            this.tabPage4.Controls.Add(this.btn_editarPreco);
-            this.tabPage4.Controls.Add(this.btn_salvarPreco);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(780, 549);
+            this.tabPage4.Size = new System.Drawing.Size(519, 581);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Preço Combustível";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // dataGrid_Combustivel
+            // lbl_cadastroCombustiveis
             // 
-            this.dataGrid_Combustivel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid_Combustivel.Location = new System.Drawing.Point(3, 267);
-            this.dataGrid_Combustivel.Name = "dataGrid_Combustivel";
-            this.dataGrid_Combustivel.Size = new System.Drawing.Size(774, 265);
-            this.dataGrid_Combustivel.TabIndex = 15;
-            this.dataGrid_Combustivel.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Combustivel_CellContentClick);
+            this.lbl_cadastroCombustiveis.AutoSize = true;
+            this.lbl_cadastroCombustiveis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cadastroCombustiveis.Location = new System.Drawing.Point(8, 19);
+            this.lbl_cadastroCombustiveis.Name = "lbl_cadastroCombustiveis";
+            this.lbl_cadastroCombustiveis.Size = new System.Drawing.Size(194, 20);
+            this.lbl_cadastroCombustiveis.TabIndex = 17;
+            this.lbl_cadastroCombustiveis.Text = "Cadastro de Combustiveis";
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.Controls.Add(this.btn_salvarPreco);
+            this.flowLayoutPanel4.Controls.Add(this.btn_editarPreco);
+            this.flowLayoutPanel4.Controls.Add(this.btn_excluirPreco);
+            this.flowLayoutPanel4.Controls.Add(this.btn_LimparPreco);
+            this.flowLayoutPanel4.Controls.Add(this.btn_buscarPreco);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(6, 283);
+            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(516, 36);
+            this.flowLayoutPanel4.TabIndex = 16;
+            // 
+            // btn_salvarPreco
+            // 
+            this.btn_salvarPreco.Image = global::ProjetoLogistica.Properties.Resources.salvar;
+            this.btn_salvarPreco.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_salvarPreco.Location = new System.Drawing.Point(6, 3);
+            this.btn_salvarPreco.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_salvarPreco.Name = "btn_salvarPreco";
+            this.btn_salvarPreco.Size = new System.Drawing.Size(90, 30);
+            this.btn_salvarPreco.TabIndex = 8;
+            this.btn_salvarPreco.Text = "Salvar";
+            this.btn_salvarPreco.UseVisualStyleBackColor = true;
+            this.btn_salvarPreco.Click += new System.EventHandler(this.btn_salvarPreco_Click);
+            // 
+            // btn_editarPreco
+            // 
+            this.btn_editarPreco.Image = global::ProjetoLogistica.Properties.Resources.editar;
+            this.btn_editarPreco.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_editarPreco.Location = new System.Drawing.Point(108, 3);
+            this.btn_editarPreco.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_editarPreco.Name = "btn_editarPreco";
+            this.btn_editarPreco.Size = new System.Drawing.Size(90, 30);
+            this.btn_editarPreco.TabIndex = 9;
+            this.btn_editarPreco.Text = "Editar";
+            this.btn_editarPreco.UseVisualStyleBackColor = true;
+            this.btn_editarPreco.Click += new System.EventHandler(this.btn_editarPreco_Click);
+            // 
+            // btn_excluirPreco
+            // 
+            this.btn_excluirPreco.Image = global::ProjetoLogistica.Properties.Resources.excluir;
+            this.btn_excluirPreco.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_excluirPreco.Location = new System.Drawing.Point(210, 3);
+            this.btn_excluirPreco.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_excluirPreco.Name = "btn_excluirPreco";
+            this.btn_excluirPreco.Size = new System.Drawing.Size(90, 30);
+            this.btn_excluirPreco.TabIndex = 11;
+            this.btn_excluirPreco.Text = "Excluir";
+            this.btn_excluirPreco.UseVisualStyleBackColor = true;
+            this.btn_excluirPreco.Click += new System.EventHandler(this.btn_excluirPreco_Click);
             // 
             // btn_LimparPreco
             // 
             this.btn_LimparPreco.Image = global::ProjetoLogistica.Properties.Resources.borracha;
             this.btn_LimparPreco.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_LimparPreco.Location = new System.Drawing.Point(14, 238);
+            this.btn_LimparPreco.Location = new System.Drawing.Point(312, 3);
+            this.btn_LimparPreco.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
             this.btn_LimparPreco.Name = "btn_LimparPreco";
-            this.btn_LimparPreco.Size = new System.Drawing.Size(75, 23);
+            this.btn_LimparPreco.Size = new System.Drawing.Size(90, 30);
             this.btn_LimparPreco.TabIndex = 14;
             this.btn_LimparPreco.Text = "Limpar";
             this.btn_LimparPreco.UseVisualStyleBackColor = true;
             this.btn_LimparPreco.Click += new System.EventHandler(this.btn_LimparPreco_Click);
             // 
+            // btn_buscarPreco
+            // 
+            this.btn_buscarPreco.Image = global::ProjetoLogistica.Properties.Resources.consultar;
+            this.btn_buscarPreco.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_buscarPreco.Location = new System.Drawing.Point(414, 3);
+            this.btn_buscarPreco.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_buscarPreco.Name = "btn_buscarPreco";
+            this.btn_buscarPreco.Size = new System.Drawing.Size(90, 30);
+            this.btn_buscarPreco.TabIndex = 10;
+            this.btn_buscarPreco.Text = "  Buscar";
+            this.btn_buscarPreco.UseVisualStyleBackColor = true;
+            this.btn_buscarPreco.Click += new System.EventHandler(this.btn_buscarPreco_Click);
+            // 
+            // dataGrid_Combustivel
+            // 
+            this.dataGrid_Combustivel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid_Combustivel.Location = new System.Drawing.Point(6, 326);
+            this.dataGrid_Combustivel.Name = "dataGrid_Combustivel";
+            this.dataGrid_Combustivel.Size = new System.Drawing.Size(506, 249);
+            this.dataGrid_Combustivel.TabIndex = 15;
+            this.dataGrid_Combustivel.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Combustivel_CellContentClick);
+            // 
             // dateTimeCombustivel
             // 
-            this.dateTimeCombustivel.Location = new System.Drawing.Point(108, 167);
+            this.dateTimeCombustivel.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeCombustivel.Location = new System.Drawing.Point(108, 224);
             this.dateTimeCombustivel.Name = "dateTimeCombustivel";
             this.dateTimeCombustivel.Size = new System.Drawing.Size(218, 20);
             this.dateTimeCombustivel.TabIndex = 13;
@@ -720,21 +886,21 @@
             "Gasolina",
             "Diesel",
             "GNV"});
-            this.cmb_combustivel.Location = new System.Drawing.Point(98, 66);
+            this.cmb_combustivel.Location = new System.Drawing.Point(98, 123);
             this.cmb_combustivel.Name = "cmb_combustivel";
             this.cmb_combustivel.Size = new System.Drawing.Size(228, 21);
             this.cmb_combustivel.TabIndex = 12;
             // 
             // txt_precoCombustivel
             // 
-            this.txt_precoCombustivel.Location = new System.Drawing.Point(60, 117);
+            this.txt_precoCombustivel.Location = new System.Drawing.Point(60, 174);
             this.txt_precoCombustivel.Name = "txt_precoCombustivel";
             this.txt_precoCombustivel.Size = new System.Drawing.Size(266, 20);
             this.txt_precoCombustivel.TabIndex = 6;
             // 
             // txt_combustivelID
             // 
-            this.txt_combustivelID.Location = new System.Drawing.Point(114, 17);
+            this.txt_combustivelID.Location = new System.Drawing.Point(114, 74);
             this.txt_combustivelID.Name = "txt_combustivelID";
             this.txt_combustivelID.ReadOnly = true;
             this.txt_combustivelID.Size = new System.Drawing.Size(212, 20);
@@ -744,7 +910,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(8, 171);
+            this.label17.Location = new System.Drawing.Point(8, 228);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(94, 16);
             this.label17.TabIndex = 3;
@@ -754,7 +920,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(8, 121);
+            this.label16.Location = new System.Drawing.Point(8, 178);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(46, 16);
             this.label16.TabIndex = 2;
@@ -764,7 +930,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(8, 71);
+            this.label15.Location = new System.Drawing.Point(8, 128);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(84, 16);
             this.label15.TabIndex = 1;
@@ -774,72 +940,21 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(8, 21);
+            this.label14.Location = new System.Drawing.Point(8, 78);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(100, 16);
             this.label14.TabIndex = 0;
             this.label14.Text = "Combustível ID:";
             // 
-            // btn_excluirPreco
-            // 
-            this.btn_excluirPreco.Image = global::ProjetoLogistica.Properties.Resources.excluir;
-            this.btn_excluirPreco.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_excluirPreco.Location = new System.Drawing.Point(254, 209);
-            this.btn_excluirPreco.Name = "btn_excluirPreco";
-            this.btn_excluirPreco.Size = new System.Drawing.Size(75, 23);
-            this.btn_excluirPreco.TabIndex = 11;
-            this.btn_excluirPreco.Text = "Excluir";
-            this.btn_excluirPreco.UseVisualStyleBackColor = true;
-            this.btn_excluirPreco.Click += new System.EventHandler(this.btn_excluirPreco_Click);
-            // 
-            // btn_buscarPreco
-            // 
-            this.btn_buscarPreco.Image = global::ProjetoLogistica.Properties.Resources.consultar;
-            this.btn_buscarPreco.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_buscarPreco.Location = new System.Drawing.Point(173, 209);
-            this.btn_buscarPreco.Name = "btn_buscarPreco";
-            this.btn_buscarPreco.Size = new System.Drawing.Size(75, 23);
-            this.btn_buscarPreco.TabIndex = 10;
-            this.btn_buscarPreco.Text = "  Buscar";
-            this.btn_buscarPreco.UseVisualStyleBackColor = true;
-            this.btn_buscarPreco.Click += new System.EventHandler(this.btn_buscarPreco_Click);
-            // 
-            // btn_editarPreco
-            // 
-            this.btn_editarPreco.Image = global::ProjetoLogistica.Properties.Resources.editar;
-            this.btn_editarPreco.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_editarPreco.Location = new System.Drawing.Point(92, 209);
-            this.btn_editarPreco.Name = "btn_editarPreco";
-            this.btn_editarPreco.Size = new System.Drawing.Size(75, 23);
-            this.btn_editarPreco.TabIndex = 9;
-            this.btn_editarPreco.Text = "Editar";
-            this.btn_editarPreco.UseVisualStyleBackColor = true;
-            this.btn_editarPreco.Click += new System.EventHandler(this.btn_editarPreco_Click);
-            // 
-            // btn_salvarPreco
-            // 
-            this.btn_salvarPreco.Image = global::ProjetoLogistica.Properties.Resources.salvar;
-            this.btn_salvarPreco.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_salvarPreco.Location = new System.Drawing.Point(11, 209);
-            this.btn_salvarPreco.Name = "btn_salvarPreco";
-            this.btn_salvarPreco.Size = new System.Drawing.Size(75, 23);
-            this.btn_salvarPreco.TabIndex = 8;
-            this.btn_salvarPreco.Text = "Salvar";
-            this.btn_salvarPreco.UseVisualStyleBackColor = true;
-            this.btn_salvarPreco.Click += new System.EventHandler(this.btn_salvarPreco_Click);
-            // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.lbl_cadastroViagens);
+            this.tabPage5.Controls.Add(this.flowLayoutPanel5);
             this.tabPage5.Controls.Add(this.cmb_Motorista);
             this.tabPage5.Controls.Add(this.cmb_Rota);
             this.tabPage5.Controls.Add(this.cmb_Veiculo);
             this.tabPage5.Controls.Add(this.groupBox1);
             this.tabPage5.Controls.Add(this.dataGrid_Viagem);
-            this.tabPage5.Controls.Add(this.btn_LimparViagem);
-            this.tabPage5.Controls.Add(this.btn_excluirViagem);
-            this.tabPage5.Controls.Add(this.btn_buscarViagem);
-            this.tabPage5.Controls.Add(this.btn_editarViagem);
-            this.tabPage5.Controls.Add(this.btn_salvarViagem);
             this.tabPage5.Controls.Add(this.txt_viagemID);
             this.tabPage5.Controls.Add(this.dateTimeChegada);
             this.tabPage5.Controls.Add(this.dateTimeSaida);
@@ -851,36 +966,124 @@
             this.tabPage5.Controls.Add(this.label18);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(780, 549);
+            this.tabPage5.Size = new System.Drawing.Size(519, 581);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Viagem";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // lbl_cadastroViagens
+            // 
+            this.lbl_cadastroViagens.AutoSize = true;
+            this.lbl_cadastroViagens.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cadastroViagens.Location = new System.Drawing.Point(10, 20);
+            this.lbl_cadastroViagens.Name = "lbl_cadastroViagens";
+            this.lbl_cadastroViagens.Size = new System.Drawing.Size(158, 20);
+            this.lbl_cadastroViagens.TabIndex = 28;
+            this.lbl_cadastroViagens.Text = "Cadastro de Viagens";
+            // 
+            // flowLayoutPanel5
+            // 
+            this.flowLayoutPanel5.Controls.Add(this.btn_salvarViagem);
+            this.flowLayoutPanel5.Controls.Add(this.btn_editarViagem);
+            this.flowLayoutPanel5.Controls.Add(this.btn_excluirViagem);
+            this.flowLayoutPanel5.Controls.Add(this.btn_LimparViagem);
+            this.flowLayoutPanel5.Controls.Add(this.btn_buscarViagem);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(6, 351);
+            this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.flowLayoutPanel5.Name = "flowLayoutPanel5";
+            this.flowLayoutPanel5.Size = new System.Drawing.Size(513, 36);
+            this.flowLayoutPanel5.TabIndex = 27;
+            // 
+            // btn_salvarViagem
+            // 
+            this.btn_salvarViagem.Image = global::ProjetoLogistica.Properties.Resources.salvar;
+            this.btn_salvarViagem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_salvarViagem.Location = new System.Drawing.Point(6, 3);
+            this.btn_salvarViagem.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_salvarViagem.Name = "btn_salvarViagem";
+            this.btn_salvarViagem.Size = new System.Drawing.Size(90, 30);
+            this.btn_salvarViagem.TabIndex = 12;
+            this.btn_salvarViagem.Text = "Salvar";
+            this.btn_salvarViagem.UseVisualStyleBackColor = true;
+            this.btn_salvarViagem.Click += new System.EventHandler(this.btn_salvarViagem_Click);
+            // 
+            // btn_editarViagem
+            // 
+            this.btn_editarViagem.Image = global::ProjetoLogistica.Properties.Resources.editar;
+            this.btn_editarViagem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_editarViagem.Location = new System.Drawing.Point(108, 3);
+            this.btn_editarViagem.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_editarViagem.Name = "btn_editarViagem";
+            this.btn_editarViagem.Size = new System.Drawing.Size(90, 30);
+            this.btn_editarViagem.TabIndex = 13;
+            this.btn_editarViagem.Text = "Editar";
+            this.btn_editarViagem.UseVisualStyleBackColor = true;
+            this.btn_editarViagem.Click += new System.EventHandler(this.btn_editarViagem_Click);
+            // 
+            // btn_excluirViagem
+            // 
+            this.btn_excluirViagem.Image = global::ProjetoLogistica.Properties.Resources.excluir;
+            this.btn_excluirViagem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_excluirViagem.Location = new System.Drawing.Point(210, 3);
+            this.btn_excluirViagem.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_excluirViagem.Name = "btn_excluirViagem";
+            this.btn_excluirViagem.Size = new System.Drawing.Size(90, 30);
+            this.btn_excluirViagem.TabIndex = 15;
+            this.btn_excluirViagem.Text = "Excluir";
+            this.btn_excluirViagem.UseVisualStyleBackColor = true;
+            this.btn_excluirViagem.Click += new System.EventHandler(this.btn_excluirViagem_Click);
+            // 
+            // btn_LimparViagem
+            // 
+            this.btn_LimparViagem.Image = global::ProjetoLogistica.Properties.Resources.borracha;
+            this.btn_LimparViagem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_LimparViagem.Location = new System.Drawing.Point(312, 3);
+            this.btn_LimparViagem.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_LimparViagem.Name = "btn_LimparViagem";
+            this.btn_LimparViagem.Size = new System.Drawing.Size(90, 30);
+            this.btn_LimparViagem.TabIndex = 16;
+            this.btn_LimparViagem.Text = "Limpar";
+            this.btn_LimparViagem.UseVisualStyleBackColor = true;
+            this.btn_LimparViagem.Click += new System.EventHandler(this.btn_LimparViagem_Click);
+            // 
+            // btn_buscarViagem
+            // 
+            this.btn_buscarViagem.Image = global::ProjetoLogistica.Properties.Resources.consultar;
+            this.btn_buscarViagem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_buscarViagem.Location = new System.Drawing.Point(414, 3);
+            this.btn_buscarViagem.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.btn_buscarViagem.Name = "btn_buscarViagem";
+            this.btn_buscarViagem.Size = new System.Drawing.Size(90, 30);
+            this.btn_buscarViagem.TabIndex = 14;
+            this.btn_buscarViagem.Text = "  Buscar";
+            this.btn_buscarViagem.UseVisualStyleBackColor = true;
+            this.btn_buscarViagem.Click += new System.EventHandler(this.btn_buscarViagem_Click);
             // 
             // cmb_Motorista
             // 
             this.cmb_Motorista.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Motorista.FormattingEnabled = true;
-            this.cmb_Motorista.Location = new System.Drawing.Point(81, 265);
+            this.cmb_Motorista.Location = new System.Drawing.Point(79, 319);
             this.cmb_Motorista.Name = "cmb_Motorista";
-            this.cmb_Motorista.Size = new System.Drawing.Size(247, 21);
+            this.cmb_Motorista.Size = new System.Drawing.Size(225, 21);
             this.cmb_Motorista.TabIndex = 26;
             // 
             // cmb_Rota
             // 
             this.cmb_Rota.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Rota.FormattingEnabled = true;
-            this.cmb_Rota.Location = new System.Drawing.Point(55, 215);
+            this.cmb_Rota.Location = new System.Drawing.Point(53, 269);
             this.cmb_Rota.Name = "cmb_Rota";
-            this.cmb_Rota.Size = new System.Drawing.Size(273, 21);
+            this.cmb_Rota.Size = new System.Drawing.Size(251, 21);
             this.cmb_Rota.TabIndex = 25;
             // 
             // cmb_Veiculo
             // 
             this.cmb_Veiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Veiculo.FormattingEnabled = true;
-            this.cmb_Veiculo.Location = new System.Drawing.Point(71, 165);
+            this.cmb_Veiculo.Location = new System.Drawing.Point(69, 219);
             this.cmb_Veiculo.Name = "cmb_Veiculo";
-            this.cmb_Veiculo.Size = new System.Drawing.Size(257, 21);
+            this.cmb_Veiculo.Size = new System.Drawing.Size(235, 21);
             this.cmb_Veiculo.TabIndex = 24;
             // 
             // groupBox1
@@ -889,17 +1092,16 @@
             this.groupBox1.Controls.Add(this.cmb_Status);
             this.groupBox1.Controls.Add(this.label24);
             this.groupBox1.Controls.Add(this.label25);
-            this.groupBox1.Controls.Add(this.btn_Detalhes);
-            this.groupBox1.Location = new System.Drawing.Point(341, 221);
+            this.groupBox1.Location = new System.Drawing.Point(314, 74);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(433, 112);
+            this.groupBox1.Size = new System.Drawing.Size(202, 166);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtros da Consulta";
             // 
             // btn_Filtros
             // 
-            this.btn_Filtros.Location = new System.Drawing.Point(254, 76);
+            this.btn_Filtros.Location = new System.Drawing.Point(106, 123);
             this.btn_Filtros.Name = "btn_Filtros";
             this.btn_Filtros.Size = new System.Drawing.Size(92, 23);
             this.btn_Filtros.TabIndex = 21;
@@ -915,14 +1117,14 @@
             "Em Andamento"});
             this.cmb_Status.Location = new System.Drawing.Point(49, 78);
             this.cmb_Status.Name = "cmb_Status";
-            this.cmb_Status.Size = new System.Drawing.Size(121, 21);
+            this.cmb_Status.Size = new System.Drawing.Size(149, 21);
             this.cmb_Status.TabIndex = 20;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(143, 16);
+            this.label24.Location = new System.Drawing.Point(11, 16);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(144, 16);
             this.label24.TabIndex = 18;
@@ -937,111 +1139,45 @@
             this.label25.TabIndex = 19;
             this.label25.Text = "Status";
             // 
-            // btn_Detalhes
-            // 
-            this.btn_Detalhes.Location = new System.Drawing.Point(352, 76);
-            this.btn_Detalhes.Name = "btn_Detalhes";
-            this.btn_Detalhes.Size = new System.Drawing.Size(75, 23);
-            this.btn_Detalhes.TabIndex = 22;
-            this.btn_Detalhes.Text = "Detalhes";
-            this.btn_Detalhes.UseVisualStyleBackColor = true;
-            // 
             // dataGrid_Viagem
             // 
             this.dataGrid_Viagem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid_Viagem.Location = new System.Drawing.Point(8, 368);
+            this.dataGrid_Viagem.Location = new System.Drawing.Point(4, 393);
             this.dataGrid_Viagem.Name = "dataGrid_Viagem";
-            this.dataGrid_Viagem.Size = new System.Drawing.Size(766, 175);
+            this.dataGrid_Viagem.Size = new System.Drawing.Size(506, 185);
             this.dataGrid_Viagem.TabIndex = 17;
             this.dataGrid_Viagem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Viagem_CellContentClick);
             // 
-            // btn_LimparViagem
-            // 
-            this.btn_LimparViagem.Image = global::ProjetoLogistica.Properties.Resources.borracha;
-            this.btn_LimparViagem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_LimparViagem.Location = new System.Drawing.Point(13, 339);
-            this.btn_LimparViagem.Name = "btn_LimparViagem";
-            this.btn_LimparViagem.Size = new System.Drawing.Size(75, 23);
-            this.btn_LimparViagem.TabIndex = 16;
-            this.btn_LimparViagem.Text = "Limpar";
-            this.btn_LimparViagem.UseVisualStyleBackColor = true;
-            this.btn_LimparViagem.Click += new System.EventHandler(this.btn_LimparViagem_Click);
-            // 
-            // btn_excluirViagem
-            // 
-            this.btn_excluirViagem.Image = global::ProjetoLogistica.Properties.Resources.excluir;
-            this.btn_excluirViagem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_excluirViagem.Location = new System.Drawing.Point(256, 310);
-            this.btn_excluirViagem.Name = "btn_excluirViagem";
-            this.btn_excluirViagem.Size = new System.Drawing.Size(75, 23);
-            this.btn_excluirViagem.TabIndex = 15;
-            this.btn_excluirViagem.Text = "Excluir";
-            this.btn_excluirViagem.UseVisualStyleBackColor = true;
-            this.btn_excluirViagem.Click += new System.EventHandler(this.btn_excluirViagem_Click);
-            // 
-            // btn_buscarViagem
-            // 
-            this.btn_buscarViagem.Image = global::ProjetoLogistica.Properties.Resources.consultar;
-            this.btn_buscarViagem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_buscarViagem.Location = new System.Drawing.Point(175, 310);
-            this.btn_buscarViagem.Name = "btn_buscarViagem";
-            this.btn_buscarViagem.Size = new System.Drawing.Size(75, 23);
-            this.btn_buscarViagem.TabIndex = 14;
-            this.btn_buscarViagem.Text = "  Buscar";
-            this.btn_buscarViagem.UseVisualStyleBackColor = true;
-            this.btn_buscarViagem.Click += new System.EventHandler(this.btn_buscarViagem_Click);
-            // 
-            // btn_editarViagem
-            // 
-            this.btn_editarViagem.Image = global::ProjetoLogistica.Properties.Resources.editar;
-            this.btn_editarViagem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_editarViagem.Location = new System.Drawing.Point(94, 310);
-            this.btn_editarViagem.Name = "btn_editarViagem";
-            this.btn_editarViagem.Size = new System.Drawing.Size(75, 23);
-            this.btn_editarViagem.TabIndex = 13;
-            this.btn_editarViagem.Text = "Editar";
-            this.btn_editarViagem.UseVisualStyleBackColor = true;
-            this.btn_editarViagem.Click += new System.EventHandler(this.btn_editarViagem_Click);
-            // 
-            // btn_salvarViagem
-            // 
-            this.btn_salvarViagem.Image = global::ProjetoLogistica.Properties.Resources.salvar;
-            this.btn_salvarViagem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_salvarViagem.Location = new System.Drawing.Point(13, 310);
-            this.btn_salvarViagem.Name = "btn_salvarViagem";
-            this.btn_salvarViagem.Size = new System.Drawing.Size(75, 23);
-            this.btn_salvarViagem.TabIndex = 12;
-            this.btn_salvarViagem.Text = "Salvar";
-            this.btn_salvarViagem.UseVisualStyleBackColor = true;
-            this.btn_salvarViagem.Click += new System.EventHandler(this.btn_salvarViagem_Click);
-            // 
             // txt_viagemID
             // 
-            this.txt_viagemID.Location = new System.Drawing.Point(89, 16);
+            this.txt_viagemID.Location = new System.Drawing.Point(87, 70);
             this.txt_viagemID.Name = "txt_viagemID";
             this.txt_viagemID.ReadOnly = true;
-            this.txt_viagemID.Size = new System.Drawing.Size(239, 20);
+            this.txt_viagemID.Size = new System.Drawing.Size(80, 20);
             this.txt_viagemID.TabIndex = 8;
             // 
             // dateTimeChegada
             // 
-            this.dateTimeChegada.Location = new System.Drawing.Point(76, 116);
+            this.dateTimeChegada.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeChegada.Location = new System.Drawing.Point(74, 170);
             this.dateTimeChegada.Name = "dateTimeChegada";
-            this.dateTimeChegada.Size = new System.Drawing.Size(252, 20);
+            this.dateTimeChegada.Size = new System.Drawing.Size(230, 20);
             this.dateTimeChegada.TabIndex = 7;
             // 
             // dateTimeSaida
             // 
-            this.dateTimeSaida.Location = new System.Drawing.Point(57, 66);
+            this.dateTimeSaida.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeSaida.Location = new System.Drawing.Point(55, 120);
             this.dateTimeSaida.Name = "dateTimeSaida";
-            this.dateTimeSaida.Size = new System.Drawing.Size(271, 20);
+            this.dateTimeSaida.Size = new System.Drawing.Size(249, 20);
             this.dateTimeSaida.TabIndex = 6;
+            this.dateTimeSaida.Value = new System.DateTime(2026, 10, 23, 0, 0, 0, 0);
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(10, 270);
+            this.label23.Location = new System.Drawing.Point(8, 324);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(65, 16);
             this.label23.TabIndex = 5;
@@ -1051,7 +1187,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(10, 220);
+            this.label22.Location = new System.Drawing.Point(8, 274);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(39, 16);
             this.label22.TabIndex = 4;
@@ -1061,7 +1197,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(10, 170);
+            this.label21.Location = new System.Drawing.Point(8, 224);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(55, 16);
             this.label21.TabIndex = 3;
@@ -1071,7 +1207,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(10, 120);
+            this.label20.Location = new System.Drawing.Point(8, 174);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(60, 16);
             this.label20.TabIndex = 2;
@@ -1081,7 +1217,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(10, 70);
+            this.label19.Location = new System.Drawing.Point(8, 124);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(41, 16);
             this.label19.TabIndex = 1;
@@ -1091,7 +1227,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(10, 20);
+            this.label18.Location = new System.Drawing.Point(8, 74);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(73, 16);
             this.label18.TabIndex = 0;
@@ -1099,9 +1235,9 @@
             // 
             // btn_Logoff
             // 
-            this.btn_Logoff.Location = new System.Drawing.Point(713, 624);
+            this.btn_Logoff.Location = new System.Drawing.Point(12, 625);
             this.btn_Logoff.Name = "btn_Logoff";
-            this.btn_Logoff.Size = new System.Drawing.Size(75, 23);
+            this.btn_Logoff.Size = new System.Drawing.Size(506, 30);
             this.btn_Logoff.TabIndex = 1;
             this.btn_Logoff.Text = "Sair";
             this.btn_Logoff.UseVisualStyleBackColor = true;
@@ -1111,9 +1247,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 659);
-            this.Controls.Add(this.btn_Logoff);
+            this.ClientSize = new System.Drawing.Size(528, 659);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.btn_Logoff);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -1121,18 +1257,23 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Veiculo)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Motorista)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.flowLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Rota)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.flowLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Combustivel)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.flowLayoutPanel5.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Viagem)).EndInit();
@@ -1226,12 +1367,21 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btn_Detalhes;
         private System.Windows.Forms.ComboBox cmb_Motorista;
         private System.Windows.Forms.ComboBox cmb_Rota;
         private System.Windows.Forms.ComboBox cmb_Veiculo;
         private System.Windows.Forms.Button btn_Logoff;
         private System.Windows.Forms.Button btn_Calcular;
+        private System.Windows.Forms.Label lbl_cadastroVeiculos;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Label lbl_cadastroMotoristas;
+        private System.Windows.Forms.Label lbl_cadastroRotas;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.Label lbl_cadastroCombustiveis;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
+        private System.Windows.Forms.Label lbl_cadastroViagens;
     }
 }
 
