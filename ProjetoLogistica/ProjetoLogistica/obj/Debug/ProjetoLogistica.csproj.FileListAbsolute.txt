@@ -124,3 +124,5 @@ C:\Users\lcp16\OneDrive\Área de Trabalho\SENAC\projeto_log-stica\ProjetoLogisti
 C:\Users\lcp16\OneDrive\Área de Trabalho\SENAC\projeto_log-stica\ProjetoLogistica\ProjetoLogistica\obj\Debug\ProjetoLogistica.Form3.resources
 C:\Users\lcp16\OneDrive\Área de Trabalho\SENAC\projeto_log-stica\ProjetoLogistica\ProjetoLogistica\bin\Debug\Newtonsoft.Json.dll
 C:\Users\lcp16\OneDrive\Área de Trabalho\SENAC\projeto_log-stica\ProjetoLogistica\ProjetoLogistica\bin\Debug\Newtonsoft.Json.xml
+C:\Users\lucas.cpsilva\Desktop\projeto_log-stica\ProjetoLogistica\ProjetoLogistica\bin\Debug\Newtonsoft.Json.dll
+C:\Users\lucas.cpsilva\Desktop\projeto_log-stica\ProjetoLogistica\ProjetoLogistica\bin\Debug\Newtonsoft.Json.xml
